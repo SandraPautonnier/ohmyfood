@@ -1,4 +1,46 @@
 @import "./_variables.scss";
 @import "./_mixins.scss";
 
+//Mobile First
+//Général
 
+body {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.main-container {
+    width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.section-title {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.btn-main {
+    border: none;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 1rem;
+    color: white;
+    padding: 24px;
+    @include color-gradient;
+    @include box-shadow;
+}
+
+.hero-acceuil {
+    background-color: $background-light-grey;
+}
