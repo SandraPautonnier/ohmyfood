@@ -50,7 +50,7 @@ a {
     padding: 1rem 1.875rem 1.5rem;
     text-align: center;
     background-color: $background-light-grey;
-    @include box-center;
+    @include flex-center;
     h1 {
         font-weight: 700;
         font-size: 1.5rem;
@@ -64,25 +64,35 @@ a {
 
 //Fonctionnement
 .box-fonctionnement {
-    @include box-center;
+    @include flex-center;
+    gap: 1.5rem;
     .card-fonctionnement {
         width: 322.49px;
+        height: 72.38px;
         background-color: $background-light-grey;
-        @include box-radius;
+        border-radius: 20px;
+        gap: 30px;
+        justify-content: flex-start;
+        @include flex-align;
+        @include box-shadow;
         p {
             width: 24px;
             height: 24px;
+            position: relative;
+            left: -12px;
             border-radius: 50%;
             font-size: 0.886rem;
             line-height: 1.65em;
             text-align: center;
-            align-items: center;
-            justify-content: center;
             background-color: $main-color;
             color: white;
         }
-        i .fa-solid {
+        i {
             color: $icon-color;
+
+        }
+        h4 {
+            font-weight: 500;
         }
     }
 }
