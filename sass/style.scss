@@ -22,6 +22,8 @@ h1 {
     font-family: "Shrikhand", serif;
     font-weight: 400;
     font-style: normal;
+    display: flex;
+    justify-content: center;
 }
 
 a {
@@ -49,16 +51,24 @@ a {
 }
 
 //header
-.header {
+header {
     @include flex-center;
-    input {
-        border: none;
-        @include flex-center;
-        .placeholder {
+    form {
+        font-size: 1rem;
+        font-weight: 500;
+        background-color: $background-location;
+        width: 100%;
+        height: 50px;
+        @include flex-align;
+        justify-content: center;
+        color: $background-dark-grey;
+        input {
+            background-color: $background-location;
             border: none;
+            text-align: center;
+            justify-content: center;
         }
     }
-    
 }
 
 //hero-acceuil
