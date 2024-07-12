@@ -1,7 +1,20 @@
+@import "./_variables.scss";
+
+@mixin box-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 @mixin box-shadow {
     box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
 }
 
 @mixin color-gradient {
-    background: linear-gradient(0deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
+    background: linear-gradient(0deg, $main-color 0%, $secondary-color 100%);
+}
+
+@mixin box-radius {
+    border-radius: 30px;
 }

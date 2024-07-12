@@ -4,6 +4,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   background-color: white;
   width: 100%;
   margin: 0;
@@ -22,6 +23,7 @@ a {
 .section-title {
   font-weight: 700;
   font-size: 1.5rem;
+  padding-left: 1.313rem;
 }
 
 .btn-main {
@@ -29,12 +31,55 @@ a {
   border-radius: 50px;
   font-weight: 500;
   font-size: 1rem;
+  line-height: 18.75px;
   color: white;
-  padding: 24px;
-  background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  padding: 17px 25px;
+  margin: 1rem 1.5rem;
+  background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
   box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
 }
 
 .hero-acceuil {
+  padding: 1rem 1.875rem 1.5rem;
+  text-align: center;
   background-color: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.hero-acceuil h1 {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.hero-acceuil p {
+  font-weight: 300;
+  font-size: 1.125rem;
+}
+
+.box-fonctionnement {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.box-fonctionnement .card-fonctionnement {
+  width: 322.49px;
+  background-color: #f6f6f6;
+  border-radius: 30px;
+}
+.box-fonctionnement .card-fonctionnement p {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  font-size: 0.886rem;
+  line-height: 1.65em;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-color: #9356dc;
+  color: white;
+}
+.box-fonctionnement .card-fonctionnement i .fa-solid {
+  color: #7e7e7e;
 }/*# sourceMappingURL=style.css.map */

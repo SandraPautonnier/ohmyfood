@@ -10,6 +10,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     background-color: white;
     width: 100%;
     margin: 0;
@@ -28,6 +29,7 @@ a {
 .section-title {
     font-weight: 700;
     font-size: 1.5rem;
+    padding-left: 1.313rem;
 }
 
 .btn-main {
@@ -35,12 +37,52 @@ a {
     border-radius: 50px;
     font-weight: 500;
     font-size: 1rem;
+    line-height: 18.75px;
     color: white;
-    padding: 24px;
+    padding: 17px 25px;
+    margin: 1rem 1.5rem;
     @include color-gradient;
     @include box-shadow;
 }
 
+//hero-acceuil
 .hero-acceuil {
+    padding: 1rem 1.875rem 1.5rem;
+    text-align: center;
     background-color: $background-light-grey;
+    @include box-center;
+    h1 {
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+    p {
+        font-weight: 300;
+        font-size: 1.125rem;
+    }
+}
+
+
+//Fonctionnement
+.box-fonctionnement {
+    @include box-center;
+    .card-fonctionnement {
+        width: 322.49px;
+        background-color: $background-light-grey;
+        @include box-radius;
+        p {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            font-size: 0.886rem;
+            line-height: 1.65em;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            background-color: $main-color;
+            color: white;
+        }
+        i .fa-solid {
+            color: $icon-color;
+        }
+    }
 }
