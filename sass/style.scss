@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap');
 @import "./_variables.scss";
 @import "./_mixins.scss";
 
@@ -6,11 +7,7 @@
 
 body {
     font-family: "Roboto", sans-serif;
-    font-style: normal;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
     background-color: white;
     width: 100%;
     margin: 0;
@@ -19,6 +16,12 @@ body {
 
 .main-container {
     width: 100%;
+}
+
+h1 {
+    font-family: "Shrikhand", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 a {
@@ -45,13 +48,26 @@ a {
     @include box-shadow;
 }
 
+//header
+.header {
+    @include flex-center;
+    input {
+        border: none;
+        @include flex-center;
+        .placeholder {
+            border: none;
+        }
+    }
+    
+}
+
 //hero-acceuil
 .hero-acceuil {
     padding: 1rem 1.875rem 1.5rem;
     text-align: center;
     background-color: $background-light-grey;
     @include flex-center;
-    h1 {
+    h2 {
         font-weight: 700;
         font-size: 1.5rem;
     }
@@ -63,7 +79,11 @@ a {
 
 
 //Fonctionnement
+.fonctionnement {
+    padding: 2.188rem 0rem 2.188rem;
+}
 .box-fonctionnement {
+    padding: 2.188rem 0rem 2.188rem 1.25rem;
     @include flex-center;
     gap: 1.5rem;
     .card-fonctionnement {
@@ -88,11 +108,24 @@ a {
             color: white;
         }
         i {
+            height: 1.25rem;
             color: $icon-color;
 
         }
         h4 {
             font-weight: 500;
+        }
+    }
+}
+
+//Restaurants
+.box-restaurants {
+    @include flex-center;
+    .card-retaurant {
+        width: 490px;
+        height: 251px;
+        img {
+            width: 100%;
         }
     }
 }

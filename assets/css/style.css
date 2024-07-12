@@ -1,10 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
 body {
   font-family: "Roboto", sans-serif;
-  font-style: normal;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   background-color: white;
   width: 100%;
   margin: 0;
@@ -13,6 +13,12 @@ body {
 
 .main-container {
   width: 100%;
+}
+
+h1 {
+  font-family: "Shrikhand", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 a {
@@ -39,6 +45,23 @@ a {
   box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.15);
 }
 
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.header input {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.header input .placeholder {
+  border: none;
+}
+
 .hero-acceuil {
   padding: 1rem 1.875rem 1.5rem;
   text-align: center;
@@ -48,7 +71,7 @@ a {
   align-items: center;
   justify-content: center;
 }
-.hero-acceuil h1 {
+.hero-acceuil h2 {
   font-weight: 700;
   font-size: 1.5rem;
 }
@@ -57,7 +80,12 @@ a {
   font-size: 1.125rem;
 }
 
+.fonctionnement {
+  padding: 2.188rem 0rem 2.188rem;
+}
+
 .box-fonctionnement {
+  padding: 2.188rem 0rem 2.188rem 1.25rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -89,10 +117,25 @@ a {
   color: white;
 }
 .box-fonctionnement .card-fonctionnement i {
+  height: 1.25rem;
   color: #7e7e7e;
 }
 .box-fonctionnement .card-fonctionnement h4 {
   font-weight: 500;
+}
+
+.box-restaurants {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.box-restaurants .card-retaurant {
+  width: 490px;
+  height: 251px;
+}
+.box-restaurants .card-retaurant img {
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
