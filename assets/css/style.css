@@ -134,18 +134,40 @@ header form input {
   font-weight: 500;
 }
 
-.box-restaurants {
+.restaurants {
+  background-color: #f6f6f6;
+  padding-top: 1.25rem;
+}
+.restaurants .box-restaurants {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  gap: 15px;
+  padding: 15px;
+  box-sizing: border-box;
 }
-.box-restaurants .card-retaurant {
+.restaurants .box-restaurants .card-restaurant {
+  background-color: white;
+  border-radius: 15px 15px 15px 15px;
+}
+.restaurants .box-restaurants .card-restaurant img {
   width: 490px;
-  height: 251px;
+  height: 174px;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 15px 15px 0px 0px;
 }
-.box-restaurants .card-retaurant img {
-  width: 100%;
+.restaurants .box-restaurants .card-restaurant .info-restaurant {
+  padding-left: 10px;
+  margin: 0px;
+}
+.restaurants .box-restaurants .card-restaurant .info-restaurant h4 {
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 7px;
+}
+.restaurants .box-restaurants .card-restaurant .info-restaurant p {
+  font-weight: 300;
+  margin-top: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
