@@ -47,6 +47,17 @@ a {
   box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.15);
 }
 
+input[type=checkbox] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+}
+
+input[type=checkbox] {
+  font-family: FontAwesome;
+  content: url(https://fontawesome.com/icons/heart?f=classic&s=regular);
+}
+
 header {
   display: flex;
   flex-direction: column;
@@ -168,6 +179,29 @@ header form input {
 .restaurants .box-restaurants .card-restaurant .info-restaurant p {
   font-weight: 300;
   margin-top: 0;
+}
+
+footer {
+  background-color: #353535;
+  color: white;
+  padding: 1.563rem;
+}
+footer h5 {
+  font-family: "Shrikhand", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 0.938rem;
+}
+footer .box-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+footer .box-footer .part {
+  display: flex;
+  flex-direction: column;
 }
 
 /*# sourceMappingURL=style.css.map */

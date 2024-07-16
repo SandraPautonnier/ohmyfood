@@ -50,6 +50,19 @@ a {
     @include box-shadow;
 }
 
+input[type=checkbox] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+}
+
+input[type=checkbox] {
+    font-family: FontAwesome;
+    content: url(https://fontawesome.com/icons/heart?f=classic&s=regular);
+}
+
+
+
 
 
 //header
@@ -164,5 +177,30 @@ header {
                 }
             }
         }    
+    }
+}
+
+//footer
+footer {
+    background-color: $background-dark-grey;
+    color: white;
+    padding: 1.563rem;
+    h5 {
+        font-family: "Shrikhand", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 18px;
+        margin-top: 0;
+        margin-bottom: 0.938rem;
+    }
+    .box-footer {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        .part {
+            display: flex;
+            flex-direction: column;
+        }
+        
     }
 }
