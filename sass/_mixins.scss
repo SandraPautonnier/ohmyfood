@@ -24,3 +24,8 @@
 @mixin box-radius {
     border-radius: 30px;
 }
+
+@mixin padding-section {
+    padding-top: 3.125rem;
+    padding-bottom: 3.125rem;
+}

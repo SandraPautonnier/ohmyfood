@@ -35,6 +35,7 @@ a {
     font-weight: 700;
     font-size: 1.5rem;
     padding-left: 1.313rem;
+    margin: 0;
 }
 
 .btn-main {
@@ -50,26 +51,25 @@ a {
     @include box-shadow;
 }
 
-input[type=checkbox] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
+.btn-fav {
+    width: 22px;
+    input[type="checkbox"], i.fa-solid.fa-heart.full {
+        display: none;
+    }
+    input[type="checkbox"]:checked~.full {
+        display: inline-block;
+        color: linear-gradient(0deg, $main-color 0%, $secondary-color 100%);
+    }
+    input[type="checkbox"]:checked~.nofull {
+        display: none;
+    }
 }
-
-input[type=checkbox] {
-    font-family: FontAwesome;
-    content: url(https://fontawesome.com/icons/heart?f=classic&s=regular);
-}
-
-
-
-
 
 //header
 header {
     @include flex-center;
     form {
-        font-size: 1rem;
+        font-size: 16px;
         font-weight: 500;
         background-color: $background-location;
         width: 100%;
@@ -77,11 +77,27 @@ header {
         @include flex-align;
         justify-content: center;
         color: $background-dark-grey;
+        gap: 15px;
         input {
             background-color: $background-location;
             border: none;
-            text-align: center;
-            justify-content: center;
+            text-align: justify;
+            width: 150px;
+            height: 40px;
+            &:focus {
+                outline: none;
+                font-family: "Roboto", sans-serif;
+                font-size: 16px;
+                font-weight: 500;
+                color: $background-dark-grey;
+            }
+            &::placeholder {
+                font-family: "Roboto", sans-serif;
+                font-size: 16px;
+                font-weight: 500;
+                color: $background-dark-grey;
+                
+            }
         }
     }
 }
@@ -105,40 +121,40 @@ header {
 
 //Fonctionnement
 .fonctionnement {
-    padding: 2.188rem 0rem 2.188rem;
-}
-.box-fonctionnement {
-    padding: 2.188rem 0rem 2.188rem 1.25rem;
-    @include flex-center;
-    gap: 1.5rem;
-    .card-fonctionnement {
-        width: 322.49px;
-        height: 72.38px;
-        background-color: $background-light-grey;
-        border-radius: 20px;
-        gap: 30px;
-        justify-content: flex-start;
-        @include flex-align;
-        @include box-shadow;
-        p {
-            width: 24px;
-            height: 24px;
-            position: relative;
-            left: -12px;
-            border-radius: 50%;
-            font-size: 0.886rem;
-            line-height: 1.65em;
-            text-align: center;
-            background-color: $main-color;
-            color: white;
-        }
-        i {
-            height: 1.25rem;
-            color: $icon-color;
-
-        }
-        h4 {
-            font-weight: 500;
+    @include padding-section;
+    .box-fonctionnement {
+        padding: 1.688rem 0rem 1.25rem 1.25rem;
+        @include flex-center;
+        gap: 1.5rem;
+        .card-fonctionnement {
+            width: 322.49px;
+            height: 72.38px;
+            background-color: $background-light-grey;
+            border-radius: 20px;
+            gap: 30px;
+            justify-content: flex-start;
+            @include flex-align;
+            @include box-shadow;
+            p {
+                width: 24px;
+                height: 24px;
+                position: relative;
+                left: -12px;
+                border-radius: 50%;
+                font-size: 0.886rem;
+                line-height: 1.65em;
+                text-align: center;
+                background-color: $main-color;
+                color: white;
+            }
+            i {
+                height: 1.25rem;
+                color: $icon-color;
+    
+            }
+            h4 {
+                font-weight: 500;
+            }
         }
     }
 }
@@ -146,7 +162,7 @@ header {
 //Restaurants
 .restaurants {
     background-color: $background-light-grey;
-    padding-top: 1.25rem;
+    @include padding-section;
     .box-restaurants {
         display: flex;
         flex-direction: column;
@@ -157,13 +173,13 @@ header {
             background-color: white;
             border-radius: 15px 15px 15px 15px;
             img {
-                width: 490px;
+                width: 100%;
                 height: 174px;
-                max-width: 100%;
                 object-fit: cover;
                 border-radius: 15px 15px 0px 0px;
             }
             .info-restaurant {
+                display: flex;
                 padding-left: 10px;
                 margin: 0px;
                 h4 {
@@ -174,6 +190,10 @@ header {
                 p {
                     font-weight: 300;
                     margin-top: 0;
+                }
+                .btn-fav {
+                    position: relative;
+                    right: -50px;
                 }
             }
         }    

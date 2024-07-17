@@ -32,6 +32,7 @@ a {
   font-weight: 700;
   font-size: 1.5rem;
   padding-left: 1.313rem;
+  margin: 0;
 }
 
 .btn-main {
@@ -47,15 +48,18 @@ a {
   box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.15);
 }
 
-input[type=checkbox] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
+.btn-fav {
+  width: 22px;
 }
-
-input[type=checkbox] {
-  font-family: FontAwesome;
-  content: url(https://fontawesome.com/icons/heart?f=classic&s=regular);
+.btn-fav input[type=checkbox], .btn-fav i.fa-solid.fa-heart.full {
+  display: none;
+}
+.btn-fav input[type=checkbox]:checked ~ .full {
+  display: inline-block;
+  color: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
+}
+.btn-fav input[type=checkbox]:checked ~ .nofull {
+  display: none;
 }
 
 header {
@@ -65,7 +69,7 @@ header {
   justify-content: center;
 }
 header form {
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: 500;
   background-color: #eaeaea;
   width: 100%;
@@ -75,12 +79,27 @@ header form {
   align-items: center;
   justify-content: center;
   color: #353535;
+  gap: 15px;
 }
 header form input {
   background-color: #eaeaea;
   border: none;
-  text-align: center;
-  justify-content: center;
+  text-align: justify;
+  width: 150px;
+  height: 40px;
+}
+header form input:focus {
+  outline: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #353535;
+}
+header form input::placeholder {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #353535;
 }
 
 .hero-acceuil {
@@ -102,18 +121,18 @@ header form input {
 }
 
 .fonctionnement {
-  padding: 2.188rem 0rem 2.188rem;
+  padding-top: 3.125rem;
+  padding-bottom: 3.125rem;
 }
-
-.box-fonctionnement {
-  padding: 2.188rem 0rem 2.188rem 1.25rem;
+.fonctionnement .box-fonctionnement {
+  padding: 1.688rem 0rem 1.25rem 1.25rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
 }
-.box-fonctionnement .card-fonctionnement {
+.fonctionnement .box-fonctionnement .card-fonctionnement {
   width: 322.49px;
   height: 72.38px;
   background-color: #f6f6f6;
@@ -125,7 +144,7 @@ header form input {
   align-items: center;
   box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.15);
 }
-.box-fonctionnement .card-fonctionnement p {
+.fonctionnement .box-fonctionnement .card-fonctionnement p {
   width: 24px;
   height: 24px;
   position: relative;
@@ -137,17 +156,18 @@ header form input {
   background-color: #9356dc;
   color: white;
 }
-.box-fonctionnement .card-fonctionnement i {
+.fonctionnement .box-fonctionnement .card-fonctionnement i {
   height: 1.25rem;
   color: #7e7e7e;
 }
-.box-fonctionnement .card-fonctionnement h4 {
+.fonctionnement .box-fonctionnement .card-fonctionnement h4 {
   font-weight: 500;
 }
 
 .restaurants {
   background-color: #f6f6f6;
-  padding-top: 1.25rem;
+  padding-top: 3.125rem;
+  padding-bottom: 3.125rem;
 }
 .restaurants .box-restaurants {
   display: flex;
@@ -161,13 +181,13 @@ header form input {
   border-radius: 15px 15px 15px 15px;
 }
 .restaurants .box-restaurants .card-restaurant img {
-  width: 490px;
+  width: 100%;
   height: 174px;
-  max-width: 100%;
   object-fit: cover;
   border-radius: 15px 15px 0px 0px;
 }
 .restaurants .box-restaurants .card-restaurant .info-restaurant {
+  display: flex;
   padding-left: 10px;
   margin: 0px;
 }
@@ -179,6 +199,10 @@ header form input {
 .restaurants .box-restaurants .card-restaurant .info-restaurant p {
   font-weight: 300;
   margin-top: 0;
+}
+.restaurants .box-restaurants .card-restaurant .info-restaurant .btn-fav {
+  position: relative;
+  right: -50px;
 }
 
 footer {
