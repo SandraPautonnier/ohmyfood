@@ -81,14 +81,11 @@ header {
     }
 
     form {
-        font-size: 16px;
-        font-weight: 500;
         background-color: $background-location;
         width: 100%;
         height: 50px;
         @include flex-align;
         justify-content: center;
-        color: $background-dark-grey;
         gap: 15px;
         filter: drop-shadow( 0px 4px 2px rgba(0,0,0,0.25));
         input {
@@ -97,19 +94,13 @@ header {
             text-align: justify;
             width: 150px;
             height: 40px;
+            &::placeholder {
+                @include text-form;
+                
+            }
             &:focus {
                 outline: none;
-                font-family: "Roboto", sans-serif;
-                font-size: 16px;
-                font-weight: 500;
-                color: $background-dark-grey;
-            }
-            &::placeholder {
-                font-family: "Roboto", sans-serif;
-                font-size: 16px;
-                font-weight: 500;
-                color: $background-dark-grey;
-                
+                @include text-form;
             }
         }
     }
@@ -154,7 +145,7 @@ header {
                 position: relative;
                 left: -12px;
                 border-radius: 50%;
-                font-size: 0.886rem;
+                font-size: 14px;
                 line-height: 1.65em;
                 text-align: center;
                 background-color: $main-color;

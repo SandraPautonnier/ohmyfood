@@ -29,3 +29,10 @@
     padding-top: 3.125rem;
     padding-bottom: 3.125rem;
 }
+
+@mixin text-form {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: $background-dark-grey;
+}
