@@ -24,6 +24,8 @@ h1 {
     font-style: normal;
     display: flex;
     justify-content: center;
+    margin-bottom: 0.313rem;
+    margin-top: 0.938rem;
 }
 
 a {
@@ -52,13 +54,16 @@ a {
 }
 
 .btn-fav {
-    width: 22px;
+    font-size: 20px;
     input[type="checkbox"], i.fa-solid.fa-heart.full {
         display: none;
     }
     input[type="checkbox"]:checked~.full {
         display: inline-block;
-        color: linear-gradient(0deg, $main-color 0%, $secondary-color 100%);
+        @include color-gradient;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
     input[type="checkbox"]:checked~.nofull {
         display: none;
@@ -68,6 +73,13 @@ a {
 //header
 header {
     @include flex-center;
+    .title-main {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
+    }
+
     form {
         font-size: 16px;
         font-weight: 500;
@@ -78,6 +90,7 @@ header {
         justify-content: center;
         color: $background-dark-grey;
         gap: 15px;
+        filter: drop-shadow( 0px 4px 2px rgba(0,0,0,0.25));
         input {
             background-color: $background-location;
             border: none;
@@ -180,20 +193,19 @@ header {
             }
             .info-restaurant {
                 display: flex;
-                padding-left: 10px;
+                padding: 15px 0px 0px 10px;
                 margin: 0px;
-                h4 {
-                    font-weight: 700;
-                    margin-top: 10px;
-                    margin-bottom: 7px;
-                }
-                p {
-                    font-weight: 300;
-                    margin-top: 0;
-                }
-                .btn-fav {
-                    position: relative;
-                    right: -50px;
+                .info-text-restaurant {
+                    width: 87%;
+                    h4 {
+                        font-weight: 700;
+                        margin-bottom: 7px;
+                        margin-top: 0px;
+                    }
+                    p {
+                        font-weight: 300;
+                        margin-top: 0;
+                    }
                 }
             }
         }    
