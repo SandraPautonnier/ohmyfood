@@ -55,6 +55,7 @@ a {
 
 .btn-fav {
     font-size: 20px;
+    padding-left: 5px;
     input[type="checkbox"], i.fa-solid.fa-heart.full {
         display: none;
     }
@@ -170,7 +171,7 @@ header {
     .box-restaurants {
         display: flex;
         flex-direction: column;
-        gap: 15px;
+        gap: 20px;
         padding: 15px;
         box-sizing: border-box;
         .card-restaurant {
@@ -225,5 +226,59 @@ footer {
             flex-direction: column;
         }
         
+    }
+}
+
+//Pages Resto
+//header
+.btn-back {
+    position: absolute;
+    left: 30px;
+    top: 25px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+//heros
+.heros{
+    img {
+        position: relative;
+        z-index: -1;
+        object-fit: cover;
+        height: 275px;
+        width: 100%;
+        @media (min-width: 768px) {
+            height: 383px;
+        }
+    }
+}
+
+//menu
+.menu {
+    position: relative;
+    z-index: 0;
+    top: -50px;
+    background-size: cover;
+    .background-menu {
+        background-color: $background-light-grey;
+        background-size: cover;
+        border-radius: 40px 40px 0 0;
+        .box-resto-title {
+            padding-top: 30px;
+            padding-left: 15px;
+            display: inline-flex;
+            justify-content:center;
+            gap: 40px;
+            .resto-title {
+                font-family: "Shrikhand", serif;
+                font-weight: 400;
+                font-style: normal;
+                font-size: 28px;
+                margin: 0;
+            }
+            .btn-fav {
+                font-size: 28px;
+            }
+        }
     }
 }
