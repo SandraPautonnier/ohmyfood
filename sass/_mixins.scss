@@ -7,6 +7,11 @@
     justify-content: center;
 }
 
+@mixin flex-colunm {
+    display: flex;
+    flex-direction: column;
+}
+
 @mixin flex-align {
     display: flex;
     flex-direction: row;
@@ -14,7 +19,7 @@
 }
 
 @mixin box-shadow {
-    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.15);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.10);
 }
 
 @mixin color-gradient {
@@ -32,7 +37,30 @@
 
 @mixin text-form {
     font-family: "Roboto", sans-serif;
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 15px;
     color: $background-dark-grey;
+}
+
+@mixin title-h1-resto {
+    font-family: "Shrikhand", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+@mixin padding-card {
+    display: flex;
+    padding: 15px 0px 0px 10px;
+    
+}
+
+@mixin h4-card {
+    font-weight: 700;
+    margin-bottom: 7px;
+    margin-top: 0px;
+}
+
+@mixin p-card {
+    font-weight: 300;
+    margin-top: 0;
 }

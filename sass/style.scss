@@ -19,9 +19,8 @@ body {
 }
 
 h1 {
-    font-family: "Shrikhand", serif;
-    font-weight: 400;
-    font-style: normal;
+    @include title-h1-resto;
+    font-size: 30px;
     display: flex;
     justify-content: center;
     margin-bottom: 0.313rem;
@@ -97,11 +96,13 @@ header {
             height: 40px;
             &::placeholder {
                 @include text-form;
+                font-weight: 500;
                 
             }
             &:focus {
                 outline: none;
                 @include text-form;
+                font-weight: 500;
             }
         }
     }
@@ -169,8 +170,7 @@ header {
     background-color: $background-light-grey;
     @include padding-section;
     .box-restaurants {
-        display: flex;
-        flex-direction: column;
+        @include flex-colunm;
         gap: 20px;
         padding: 15px;
         box-sizing: border-box;
@@ -184,19 +184,15 @@ header {
                 border-radius: 15px 15px 0px 0px;
             }
             .info-restaurant {
-                display: flex;
-                padding: 15px 0px 0px 10px;
+                @include padding-card;
                 margin: 0px;
                 .info-text-restaurant {
                     width: 87%;
                     h4 {
-                        font-weight: 700;
-                        margin-bottom: 7px;
-                        margin-top: 0px;
+                        @include h4-card;
                     }
                     p {
-                        font-weight: 300;
-                        margin-top: 0;
+                        @include p-card;
                     }
                 }
             }
@@ -210,20 +206,16 @@ footer {
     color: white;
     padding: 1.563rem;
     h5 {
-        font-family: "Shrikhand", serif;
-        font-weight: 400;
-        font-style: normal;
+        @include title-h1-resto;
         font-size: 18px;
         margin-top: 0;
         margin-bottom: 0.938rem;
     }
     .box-footer {
-        display: flex;
-        flex-direction: column;
+        @include flex-colunm;
         gap: 7px;
         .part {
-            display: flex;
-            flex-direction: column;
+            @include flex-colunm;
         }
         
     }
@@ -259,6 +251,8 @@ footer {
     z-index: 0;
     top: -50px;
     background-size: cover;
+    @include flex-colunm;
+    justify-content:center;
     .background-menu {
         background-color: $background-light-grey;
         background-size: cover;
@@ -268,11 +262,9 @@ footer {
             padding-left: 15px;
             display: inline-flex;
             justify-content:center;
-            gap: 40px;
+            gap: 30px;
             .resto-title {
-                font-family: "Shrikhand", serif;
-                font-weight: 400;
-                font-style: normal;
+                @include title-h1-resto;
                 font-size: 28px;
                 margin: 0;
             }
@@ -280,5 +272,64 @@ footer {
                 font-size: 28px;
             }
         }
+        .box-plat {
+            @include flex-colunm;
+            .box-menu {
+                padding-left: 13px;
+                padding-right: 13px;
+                .plat-title {
+                    font-weight: 300;
+                    font-size: 16px;
+                    margin-bottom: -7px;
+                } 
+                .line-title {
+                    display: inline-block;
+                    width: 40px;
+                    height: 0px;
+                    border-bottom: 3px solid $tertiary-color;
+                }
+                .card-menu {
+                    background-color: white;
+                    border-radius: 15px;
+                    margin-top: 13px;
+                    @include padding-card;
+                    @include box-shadow;
+                    .info-menu {
+                        width: 87%;
+                        h4 {
+                            @include h4-card;
+                        }
+                        p {
+                            @include p-card;
+                            font-size: 15px;
+                        }
+                    }
+                }
+                .prix-menu {
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: flex-end;
+                    padding-bottom: 15px;
+                    @include text-form;
+                    font-weight: 700;
+                }
+            }
+        }    
+    }
+    .btn-main {
+        display: flex;
+        justify-content: center;
+        width: 150px;
+        padding-left: 3.125rem;
+        padding-right: 3.125rem;
+        margin-top: 2.5rem;
+        margin-bottom: 2.5rem;
     }
 }
+
+.main-page {
+    footer {
+        margin-top: -50px;
+    }
+}
+
