@@ -15,6 +15,10 @@ body {
   width: 100%;
 }
 
+.main-page {
+  width: 100%;
+}
+
 h1 {
   font-family: "Shrikhand", serif;
   font-weight: 400;
@@ -263,22 +267,20 @@ footer .box-footer .part {
   position: relative;
   z-index: 0;
   top: -50px;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 .menu .background-menu {
   background-color: #f6f6f6;
-  background-size: cover;
   border-radius: 40px 40px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+  width: 1055px;
 }
 .menu .background-menu .box-resto-title {
   padding-top: 30px;
-  padding-left: 15px;
   display: inline-flex;
-  justify-content: center;
-  gap: 30px;
+  gap: 60px;
 }
 .menu .background-menu .box-resto-title .resto-title {
   font-family: "Shrikhand", serif;
@@ -288,20 +290,30 @@ footer .box-footer .part {
   margin: 0;
 }
 .menu .background-menu .box-resto-title .btn-fav {
+  position: relative;
+  left: -20px;
   font-size: 28px;
+  padding-left: 0px;
 }
 .menu .background-menu .box-plat {
   display: flex;
   flex-direction: column;
-}
-.menu .background-menu .box-plat .box-menu {
+  align-items: center;
+  max-width: 94%;
+  width: 634px;
   padding-left: 13px;
   padding-right: 13px;
+}
+.menu .background-menu .box-plat .box-menu {
+  max-width: 100%;
+  width: 634px;
+  margin-top: 35px;
 }
 .menu .background-menu .box-plat .box-menu .plat-title {
   font-weight: 300;
   font-size: 16px;
   margin-bottom: -7px;
+  margin-top: 0px;
 }
 .menu .background-menu .box-plat .box-menu .line-title {
   display: inline-block;
@@ -340,12 +352,12 @@ footer .box-footer .part {
   color: #353535;
   font-weight: 700;
 }
-.menu .btn-main {
+.menu a {
   display: flex;
   justify-content: center;
-  width: 150px;
-  padding-left: 3.125rem;
-  padding-right: 3.125rem;
+  width: 140px;
+  padding-left: 1.8rem;
+  padding-right: 1.8rem;
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
 }

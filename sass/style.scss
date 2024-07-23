@@ -18,6 +18,10 @@ body {
     width: 100%;
 }
 
+.main-page {
+    width: 100%;
+}
+
 h1 {
     @include title-h1-resto;
     font-size: 30px;
@@ -250,37 +254,45 @@ footer {
     position: relative;
     z-index: 0;
     top: -50px;
-    background-size: cover;
-    @include flex-colunm;
-    justify-content:center;
     .background-menu {
         background-color: $background-light-grey;
-        background-size: cover;
         border-radius: 40px 40px 0 0;
+        @include flex-colunm;
+        align-items: center;
+        max-width: 100%;
+        width: 1055px;
         .box-resto-title {
             padding-top: 30px;
-            padding-left: 15px;
             display: inline-flex;
-            justify-content:center;
-            gap: 30px;
+            gap: 60px;
             .resto-title {
                 @include title-h1-resto;
                 font-size: 28px;
                 margin: 0;
             }
             .btn-fav {
+                position: relative;
+                left: -20px;
                 font-size: 28px;
+                padding-left: 0px;
             }
         }
         .box-plat {
             @include flex-colunm;
+            align-items: center;
+            max-width: 94%;
+            width: 634px;
+            padding-left: 13px;
+            padding-right: 13px;
             .box-menu {
-                padding-left: 13px;
-                padding-right: 13px;
+                max-width: 100%;
+                width: 634px;
+                margin-top: 35px;
                 .plat-title {
                     font-weight: 300;
                     font-size: 16px;
                     margin-bottom: -7px;
+                    margin-top: 0px;
                 } 
                 .line-title {
                     display: inline-block;
@@ -289,7 +301,7 @@ footer {
                     border-bottom: 3px solid $tertiary-color;
                 }
                 .card-menu {
-                    background-color: white;
+                    background-color: white; 
                     border-radius: 15px;
                     margin-top: 13px;
                     @include padding-card;
@@ -316,12 +328,12 @@ footer {
             }
         }    
     }
-    .btn-main {
+    a {
         display: flex;
         justify-content: center;
-        width: 150px;
-        padding-left: 3.125rem;
-        padding-right: 3.125rem;
+        width: 140px;
+        padding-left: 1.8rem;
+        padding-right: 1.8rem;
         margin-top: 2.5rem;
         margin-bottom: 2.5rem;
     }
