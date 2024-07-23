@@ -1,4 +1,53 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
+.loader-container {
+  position: absolute;
+  top: -4200px;
+  z-index: 2;
+  background-color: white;
+  width: 200%;
+  height: 500%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 1s ease-in-out;
+}
+.loader-container .let {
+  font-family: "Shrikhand", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+  animation: loader infinite 0.3s alternate;
+}
+.loader-container .l1 {
+  animation-delay: 0.05s;
+}
+.loader-container .l2 {
+  animation-delay: 0.1s;
+}
+.loader-container .l3 {
+  animation-delay: 0.15s;
+}
+.loader-container .l4 {
+  animation-delay: 0.2s;
+}
+.loader-container .l5 {
+  animation-delay: 0.25s;
+}
+.loader-container .l6 {
+  animation-delay: 0.3s;
+}
+.loader-container .l7 {
+  animation-delay: 0.35s;
+}
+.loader-container .l8 {
+  animation-delay: 0.4s;
+}
+@keyframes loader {
+  100% {
+    transform: translateY(-30px);
+  }
+}
+
 body {
   font-family: "Roboto", sans-serif;
   display: flex;
@@ -52,7 +101,12 @@ a {
   padding: 17px 25px;
   margin: 1rem 1.5rem;
   background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
-  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.1);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.2);
+}
+.btn-main:hover {
+  transition: transform 2000ms;
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.3), 10px 50px 15px 0px rgba(255, 255, 255, 0.3) inset;
+  transition-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
 }
 
 .btn-fav {
@@ -61,6 +115,7 @@ a {
 }
 .btn-fav input[type=checkbox], .btn-fav i.fa-solid.fa-heart.full {
   display: none;
+  transform: scaleY(1);
 }
 .btn-fav input[type=checkbox]:checked ~ .full {
   display: inline-block;
@@ -68,6 +123,11 @@ a {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.btn-fav input[type=checkbox]:checked ~ .full:active {
+  transform-origin: 50% bottom;
+  transform: scaleY(1);
+  transition: transform 1000ms ease-in-out;
 }
 .btn-fav input[type=checkbox]:checked ~ .nofull {
   display: none;
@@ -157,7 +217,7 @@ header form input:focus {
   display: flex;
   flex-direction: row;
   align-items: center;
-  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.1);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.2);
 }
 .fonctionnement .box-fonctionnement .card-fonctionnement p {
   width: 24px;

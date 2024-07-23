@@ -3,6 +3,55 @@
 @import "./_mixins.scss";
 
 //Mobile First
+
+//loader
+.loader-container {
+    position: absolute;
+    top: -4200px;
+    z-index: 2;
+    background-color: white;
+    width: 200%;
+    height: 500%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 1s ease-in-out;
+    .let {
+        @include title-h1-resto;
+        font-size: 30px;
+        animation: loader infinite 0.3s alternate;
+    }
+    .l1 {
+        animation-delay: 0.05s;
+    }
+    .l2 {
+        animation-delay: 0.10s;
+    }
+    .l3 {
+        animation-delay: 0.15s;
+    }
+    .l4 {
+        animation-delay: 0.20s;
+    }
+    .l5 {
+        animation-delay: 0.25s;
+    }
+    .l6 {
+        animation-delay: 0.30s;
+    }
+    .l7 {
+        animation-delay: 0.35s;
+    }
+    .l8 {
+        animation-delay: 0.40s;
+    }
+    @keyframes loader {
+        100% {
+            transform: translateY(-30px);
+        }
+    }
+}
+
 //Général
 
 body {
@@ -54,6 +103,12 @@ a {
     margin: 1rem 1.5rem;
     @include color-gradient;
     @include box-shadow;
+    &:hover {
+        transition: transform 2000ms;
+        box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.30),
+        10px 50px 15px 0px rgb(255, 255, 255,0.3) inset; 
+        transition-timing-function: cubic-bezier(.17,.67,.83,.67);
+    }
 }
 
 .btn-fav {
@@ -61,6 +116,7 @@ a {
     padding-left: 5px;
     input[type="checkbox"], i.fa-solid.fa-heart.full {
         display: none;
+        transform: scaleY(1);
     }
     input[type="checkbox"]:checked~.full {
         display: inline-block;
@@ -68,9 +124,16 @@ a {
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        &:active {
+            transform-origin: 50% bottom;
+            transform: scaleY(1);
+            transition: transform 1000ms ease-in-out; 
+        }
     }
     input[type="checkbox"]:checked~.nofull {
         display: none;
+    
+        
     }
 }
 
@@ -305,7 +368,7 @@ footer {
                     border-radius: 15px;
                     margin-top: 13px;
                     @include padding-card;
-                    @include box-shadow;
+                    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.10);
                     .info-menu {
                         width: 87%;
                         h4 {
