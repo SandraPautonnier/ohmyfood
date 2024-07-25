@@ -5,52 +5,57 @@
 //Mobile First
 
 //loader
-.loader-container {
-    position: absolute;
-    top: -4200px;
-    z-index: 2;
-    background-color: white;
-    width: 200%;
-    height: 500%;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    transition: opacity 1s ease-in-out;
-    .let {
-        @include title-h1-resto;
-        font-size: 30px;
-        animation: loader infinite 0.3s alternate;
-    }
-    .l1 {
-        animation-delay: 0.05s;
-    }
-    .l2 {
-        animation-delay: 0.10s;
-    }
-    .l3 {
-        animation-delay: 0.15s;
-    }
-    .l4 {
-        animation-delay: 0.20s;
-    }
-    .l5 {
-        animation-delay: 0.25s;
-    }
-    .l6 {
-        animation-delay: 0.30s;
-    }
-    .l7 {
-        animation-delay: 0.35s;
-    }
-    .l8 {
-        animation-delay: 0.40s;
-    }
-    @keyframes loader {
-        100% {
-            transform: translateY(-30px);
+body {
+    
+    .loader-container {
+        display: none;
+        position: fixed;
+        top: 0px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 10;
+        background-color: white;
+        justify-content: center;
+        align-items: center;
+        transition: opacity 1s ease-in-out;
+        .let {
+            @include title-h1-resto;
+            font-size: 30px;
+            animation: loader infinite 0.3s alternate;
+        }
+        .l1 {
+            animation-delay: 0.05s;
+        }
+        .l2 {
+            animation-delay: 0.10s;
+        }
+        .l3 {
+            animation-delay: 0.15s;
+        }
+        .l4 {
+            animation-delay: 0.20s;
+        }
+        .l5 {
+            animation-delay: 0.25s;
+        }
+        .l6 {
+            animation-delay: 0.30s;
+        }
+        .l7 {
+            animation-delay: 0.35s;
+        }
+        .l8 {
+            animation-delay: 0.40s;
+        }
+        @keyframes loader {
+            100% {
+                transform: translateY(-30px);
+            }
         }
     }
 }
+
 
 //Général
 
@@ -63,7 +68,7 @@ body {
     padding: 0;
 }
 
-.main-container {
+.main-container  {
     width: 100%;
 }
 
@@ -102,12 +107,12 @@ a {
     padding: 17px 25px;
     margin: 1rem 1.5rem;
     @include color-gradient;
-    @include box-shadow;
+    box-shadow: 0px 10px 10px -5px rgba(0,0,0,0.27);
+    transition: all 0.3s;
     &:hover {
-        transition: transform 2000ms;
-        box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.30),
-        10px 50px 15px 0px rgb(255, 255, 255,0.3) inset; 
-        transition-timing-function: cubic-bezier(.17,.67,.83,.67);
+        box-shadow: 0px 7px 12px -2px rgba(0,0,0,0.35),
+        0px 0px 50px 30px rgb(255, 255, 255,0.25) inset; 
+        transition-timing-function: cubic-bezier(.63,-0.02,.35,.99);
     }
 }
 
@@ -153,13 +158,12 @@ header {
         height: 50px;
         @include flex-align;
         justify-content: center;
-        gap: 15px;
         filter: drop-shadow( 0px 4px 2px rgba(0,0,0,0.25));
         input {
             background-color: $background-location;
             border: none;
-            text-align: justify;
-            width: 150px;
+            text-align: end;
+            width: 130px;
             height: 40px;
             &::placeholder {
                 @include text-form;
@@ -177,7 +181,7 @@ header {
 
 //hero-acceuil
 .hero-acceuil {
-    padding: 1rem 1.875rem 1.5rem;
+    padding: 1.2rem 1.875rem 2.5rem;
     text-align: center;
     background-color: $background-light-grey;
     @include flex-center;
@@ -196,7 +200,7 @@ header {
 .fonctionnement {
     @include padding-section;
     .box-fonctionnement {
-        padding: 1.688rem 0rem 1.25rem 1.25rem;
+        padding: 1.688rem 0.938rem 1.25rem 1.25rem;
         @include flex-center;
         gap: 1.5rem;
         .card-fonctionnement {
@@ -204,29 +208,31 @@ header {
             height: 72.38px;
             background-color: $background-light-grey;
             border-radius: 20px;
-            gap: 30px;
+            gap: 25px;
             justify-content: flex-start;
             @include flex-align;
             @include box-shadow;
             p {
                 width: 24px;
                 height: 24px;
-                position: relative;
-                left: -12px;
                 border-radius: 50%;
                 font-size: 14px;
                 line-height: 1.65em;
                 text-align: center;
                 background-color: $main-color;
                 color: white;
+                @include relative-12;
             }
             i {
-                height: 1.25rem;
+                width: 18px;
+                top: -3px;
+                font-size: 18px;
                 color: $icon-color;
-    
+                @include relative-12;
             }
             h4 {
                 font-weight: 500;
+                @include relative-12;
             }
         }
     }
@@ -236,12 +242,14 @@ header {
 .restaurants {
     background-color: $background-light-grey;
     @include padding-section;
+    @include flex-colunm;
     .box-restaurants {
         @include flex-colunm;
         gap: 20px;
         padding: 15px;
         box-sizing: border-box;
         .card-restaurant {
+            position: relative;
             background-color: white;
             border-radius: 15px 15px 15px 15px;
             img {
@@ -250,6 +258,20 @@ header {
                 object-fit: cover;
                 border-radius: 15px 15px 0px 0px;
             }
+            .new {
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                padding: 0.45rem 0.8rem;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 16.41px;
+                text-align: center;
+                background-color: $tertiary-color;
+                color: $txt-green;
+                border-radius: 2px;
+            }
+        }
             .info-restaurant {
                 @include padding-card;
                 margin: 0px;
@@ -262,10 +284,13 @@ header {
                         @include p-card;
                     }
                 }
-            }
+            }   
+        }
+        @media (min-width: 768px) {
+            display: flex;
         }    
     }
-}
+
 
 //footer
 footer {
@@ -379,6 +404,8 @@ footer {
                             font-size: 15px;
                         }
                     }
+                    animation: reveal linear;
+                    animation-timeline: view();
                 }
                 .prix-menu {
                     display: flex;
@@ -387,6 +414,14 @@ footer {
                     padding-bottom: 15px;
                     @include text-form;
                     font-weight: 700;
+                }
+                @keyframes reveal {
+                    from {
+                        opacity: 0;
+                    }
+                    to {
+                        opacity: 1;
+                    }
                 }
             }
         }    

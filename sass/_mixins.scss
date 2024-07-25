@@ -19,7 +19,7 @@
 }
 
 @mixin box-shadow {
-    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.20);
+    box-shadow: 0px 3px 15px -5px rgba(0,0,0,0.3);
 }
 
 @mixin color-gradient {
@@ -63,4 +63,9 @@
 @mixin p-card {
     font-weight: 300;
     margin-top: 0;
+}
+
+@mixin relative-12 {
+    position: relative;
+    left: -12px;
 }
