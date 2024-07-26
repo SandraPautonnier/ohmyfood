@@ -7,6 +7,12 @@
     justify-content: center;
 }
 
+@mixin just-flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @mixin flex-colunm {
     display: flex;
     flex-direction: column;
@@ -16,6 +22,17 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin footer-row {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
 }
 
 @mixin box-shadow {
@@ -34,6 +51,12 @@
     padding-top: 3.125rem;
     padding-bottom: 3.125rem;
 }
+
+@mixin padding-section-tablette {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
 
 @mixin text-form {
     font-family: "Roboto", sans-serif;
@@ -68,4 +91,16 @@
 @mixin relative-12 {
     position: relative;
     left: -12px;
+}
+
+@mixin footer-mobile {
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+@mixin footer-tablette {
+    flex-direction: row;
+    gap: 12px;
 }

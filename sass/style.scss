@@ -199,41 +199,52 @@ header {
 //Fonctionnement
 .fonctionnement {
     @include padding-section;
-    .box-fonctionnement {
-        padding: 1.688rem 0.938rem 1.25rem 1.25rem;
-        @include flex-center;
-        gap: 1.5rem;
-        .card-fonctionnement {
-            width: 322.49px;
-            height: 72.38px;
-            background-color: $background-light-grey;
-            border-radius: 20px;
-            gap: 25px;
-            justify-content: flex-start;
-            @include flex-align;
-            @include box-shadow;
-            p {
-                width: 24px;
-                height: 24px;
-                border-radius: 50%;
-                font-size: 14px;
-                line-height: 1.65em;
-                text-align: center;
-                background-color: $main-color;
-                color: white;
-                @include relative-12;
+    @include just-flex-center;
+    @media (min-width: 768px) {
+        @include padding-section-tablette;
+    } 
+    .background-fontionnement {
+        max-width: 100%;
+        .box-fonctionnement {
+            padding: 1.688rem 0.938rem 1.25rem 1.25rem;
+            @include flex-center;
+            gap: 1.5rem;
+            .card-fonctionnement {
+                width: 322.49px;
+                height: 72.38px;
+                background-color: $background-light-grey;
+                border-radius: 20px;
+                gap: 25px;
+                justify-content: flex-start;
+                @include flex-align;
+                @include box-shadow;
+                p {
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 50%;
+                    font-size: 14px;
+                    line-height: 1.65em;
+                    text-align: center;
+                    background-color: $main-color;
+                    color: white;
+                    @include relative-12;
+                }
+                i {
+                    width: 18px;
+                    top: -3px;
+                    font-size: 18px;
+                    color: $icon-color;
+                    @include relative-12;
+                }
+                h4 {
+                    font-weight: 500;
+                    @include relative-12;
+                }
             }
-            i {
-                width: 18px;
-                top: -3px;
-                font-size: 18px;
-                color: $icon-color;
-                @include relative-12;
-            }
-            h4 {
-                font-weight: 500;
-                @include relative-12;
-            }
+            @media (min-width: 768px) {
+                @include flex-row;
+                gap: 1.875rem;
+            } 
         }
     }
 }
@@ -243,73 +254,129 @@ header {
     background-color: $background-light-grey;
     @include padding-section;
     @include flex-colunm;
-    .box-restaurants {
-        @include flex-colunm;
-        gap: 20px;
-        padding: 15px;
-        box-sizing: border-box;
-        .card-restaurant {
-            position: relative;
-            background-color: white;
-            border-radius: 15px 15px 15px 15px;
-            img {
-                width: 100%;
-                height: 174px;
-                object-fit: cover;
-                border-radius: 15px 15px 0px 0px;
+    @media (min-width: 768px) {
+        @include padding-section-tablette;
+        align-items: center;
+    } 
+    .background-restaurants {
+        max-width: 100%;
+        .box-restaurants {
+            @include flex-colunm;
+            gap: 20px;
+            padding: 1.688rem 1.5rem 0rem 1.5rem;
+            box-sizing: border-box;
+            width: 100%;
+            @media (min-width: 768px) {
+                @include flex-row;
+                flex-wrap: wrap  
+                gap: 35px;
             }
-            .new {
-                position: absolute;
-                top: 15px;
-                right: 15px;
-                padding: 0.45rem 0.8rem;
-                font-size: 14px;
-                font-weight: 500;
-                line-height: 16.41px;
-                text-align: center;
-                background-color: $tertiary-color;
-                color: $txt-green;
-                border-radius: 2px;
+            @media (min-width: 1024px) {
+                gap: 50px;
             }
-        }
-            .info-restaurant {
-                @include padding-card;
-                margin: 0px;
-                .info-text-restaurant {
-                    width: 87%;
-                    h4 {
-                        @include h4-card;
+            a {
+                max-width: 100%;
+                .card-restaurant {
+                    position: relative;
+                    background-color: white;
+                    border-radius: 15px 15px 15px 15px;
+                    width: 100%;
+                    @media (min-width: 768px) {
+                        min-width: 340px;
+                    }  
+                    @media (min-width: 1024px) {
+                        max-width: 490px;
+                    }     
+                    img {
+                        width: 100%;
+                        height: 174px;
+                        object-fit: cover;
+                        border-radius: 15px 15px 0px 0px;
                     }
-                    p {
-                        @include p-card;
+                    .new {
+                        position: absolute;
+                        top: 15px;
+                        right: 15px;
+                        padding: 0.45rem 0.8rem;
+                        font-size: 14px;
+                        font-weight: 500;
+                        line-height: 16.41px;
+                        text-align: center;
+                        background-color: $tertiary-color;
+                        color: $txt-green;
+                        border-radius: 2px;
                     }
+                    .info-restaurant {
+                        @include padding-card;
+                        margin: 0px;
+                        .info-text-restaurant {
+                            width: 87%;
+                            h4 {
+                                @include h4-card;
+                            }
+                            p {
+                                @include p-card;
+                            }
+                        }
+                    } 
                 }
-            }   
+            }
         }
-        @media (min-width: 768px) {
-            display: flex;
-        }    
-    }
-
+    } 
+}    
 
 //footer
 footer {
     background-color: $background-dark-grey;
     color: white;
     padding: 1.563rem;
+    @media (min-width: 768px) {
+        @include footer-row;
+        gap: 25px;
+        padding-top: 60px;
+    } 
+    @media (min-width: 1024px) {
+        gap: 100px;
+    }
     h5 {
         @include title-h1-resto;
         font-size: 18px;
         margin-top: 0;
         margin-bottom: 0.938rem;
+        @media (min-width: 768px) {
+            margin-bottom: 0;
+        } 
+        @media (min-width: 1024px) {
+            padding-right: 50px;
+        }
     }
     .box-footer {
         @include flex-colunm;
         gap: 7px;
+        @media (min-width: 768px) {
+            @include flex-row;
+            gap: 15px;
+        }
+        @media (min-width: 1024px) {
+            gap: 50px;
+        }  
         .part {
             @include flex-colunm;
         }
-        
+        .list-box-footer-1 {
+            font-weight: 500;
+            @include footer-mobile;
+            @media (min-width: 768px) {
+                @include footer-tablette;
+            } 
+        }
+        .list-box-footer-2 {
+            font-weight: 400;
+            @include footer-mobile;
+            @media (min-width: 768px) {
+                @include footer-tablette;
+            } 
+        }
     }
 }
 
@@ -342,6 +409,7 @@ footer {
     position: relative;
     z-index: 0;
     top: -50px;
+    @include just-flex-center;
     .background-menu {
         background-color: $background-light-grey;
         border-radius: 40px 40px 0 0;
