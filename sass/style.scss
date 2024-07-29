@@ -92,7 +92,8 @@ a {
 
 .section-title {
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 24px;
+    line-height: 28.13px;
     padding-left: 1.313rem;
     margin: 0;
 }
@@ -185,13 +186,23 @@ header {
     text-align: center;
     background-color: $background-light-grey;
     @include flex-center;
+    @media (min-width: 768px) {
+        padding-bottom: 20px;
+    } 
     h2 {
         font-weight: 700;
         font-size: 1.5rem;
+        @media (min-width: 768px) {
+            font-size: 40px;
+            margin-top: 20px;
+        } 
     }
     p {
         font-weight: 300;
         font-size: 1.125rem;
+        @media (min-width: 768px) {
+            margin-top: 0px;
+        } 
     }
 }
 
@@ -204,7 +215,8 @@ header {
         @include padding-section-tablette;
     } 
     .background-fontionnement {
-        max-width: 100%;
+        width: 100%;
+        max-width: 1080px;
         .box-fonctionnement {
             padding: 1.688rem 0.938rem 1.25rem 1.25rem;
             @include flex-center;
@@ -238,6 +250,8 @@ header {
                 }
                 h4 {
                     font-weight: 500;
+                    font-size: 16px;
+                    line-height: 18.75px;
                     @include relative-12;
                 }
             }
@@ -257,70 +271,73 @@ header {
     @media (min-width: 768px) {
         @include padding-section-tablette;
         @include just-flex-center;
+        flex-direction: initial;
     } 
     .background-restaurants {
-        max-width: 100%;
-        .boite {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        width: 100%;
+        max-width: 1080px;
+        .box-restaurants {
+            @include flex-colunm;
+            justify-content: center;
+            gap: 20px;
+            padding: 1.688rem 1.5rem 0rem 1.5rem;
+            box-sizing: border-box;
             width: 100%;
-            .box-restaurants {
-                @include flex-colunm;
-                justify-content: center;
-                gap: 20px;
-                padding: 1.688rem 1.5rem 0rem 1.5rem;
-                box-sizing: border-box;
+            max-width: 1080px;
+            @media (min-width: 768px) {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 50px;
+                row-gap: 35px;
+            }
+            @media (min-width: 1024px) {
+                gap: 100px;
+                row-gap: 50px;
+            }
+            a {
                 width: 100%;
-                max-width: 1080px;
-                @media (min-width: 768px) {
-                    display: grid;
-                    grid-template-columns: repeat(2, 1fr);
-                    gap: 35px;
-                }
-                @media (min-width: 1024px) {
-                    gap: 50px;
-                }
-                a {
-                    width: 100%;
-                    .card-restaurant {
-                        position: relative;
-                        background-color: white;
-                        border-radius: 15px 15px 15px 15px;
-                        max-width: 100%;
-                        img {
-                            width: 100%;
-                            height: 174px;
-                            object-fit: cover;
-                            border-radius: 15px 15px 0px 0px;
-                        }
-                        .new {
-                            position: absolute;
-                            top: 15px;
-                            right: 15px;
-                            padding: 0.45rem 0.8rem;
-                            font-size: 14px;
-                            font-weight: 500;
-                            line-height: 16.41px;
-                            text-align: center;
-                            background-color: $tertiary-color;
-                            color: $txt-green;
-                            border-radius: 2px;
-                        }
-                        .info-restaurant {
-                            @include padding-card;
-                            margin: 0px;
-                            .info-text-restaurant {
-                                width: 87%;
-                                h4 {
-                                    @include h4-card;
-                                }
-                                p {
-                                    @include p-card;
-                                }
-                            }
-                        } 
+                .card-restaurant {
+                    position: relative;
+                    background-color: white;
+                    border-radius: 15px 15px 15px 15px;
+                    max-width: 100%;
+                    @media (min-width: 1024px) {
+                        max-width: 490px;
                     }
+                    img {
+                        width: 100%;
+                        height: 174px;
+                        object-fit: cover;
+                        border-radius: 15px 15px 0px 0px;
+                    }
+                    .new {
+                        position: absolute;
+                        top: 15px;
+                        right: 15px;
+                        padding: 0.45rem 0.8rem;
+                        font-size: 14px;
+                        font-weight: 500;
+                        line-height: 16.41px;
+                        text-align: center;
+                        background-color: $tertiary-color;
+                        color: $txt-green;
+                        border-radius: 2px;
+                    }
+                    .info-restaurant {
+                        @include padding-card;
+                        margin: 0px;
+                        .info-text-restaurant {
+                            width: 87%;
+                            h4 {
+                                @include h4-card;
+                            }
+                            p {
+                                @include p-card;
+                                font-size: 17px;
+                                line-height: 19.92px;
+                            }
+                        }
+                    } 
                 }
             }
         }
@@ -450,6 +467,7 @@ footer {
                 .plat-title {
                     font-weight: 300;
                     font-size: 16px;
+                    line-height: 18.75px;
                     margin-bottom: -7px;
                     margin-top: 0px;
                 } 
@@ -463,36 +481,54 @@ footer {
                     background-color: white; 
                     border-radius: 15px;
                     margin-top: 13px;
-                    @include padding-card;
+                    display: flex;
                     box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.10);
                     .info-menu {
                         width: 87%;
                         h4 {
                             @include h4-card;
+                            padding-top: 15px;
+                            padding-left: 15px;
                         }
                         p {
                             @include p-card;
                             font-size: 15px;
+                            line-height: 17.63px;
+                            padding-left: 15px;
                         }
                     }
-                    animation: reveal linear;
+                    animation: fly-in linear both;
                     animation-timeline: view();
+                    animation-range: entry 0% contain 100%;
                 }
                 .prix-menu {
                     display: flex;
                     justify-content: flex-end;
                     align-items: flex-end;
                     padding-bottom: 15px;
+                    padding-right: 15px;
+                    padding-left: 40px;
                     @include text-form;
                     font-weight: 700;
                 }
-                @keyframes reveal {
-                    from {
-                        opacity: 0;
-                    }
-                    to {
-                        opacity: 1;
-                    }
+                .check {
+                    background-color: $tertiary-color;
+                    border-radius: 0px 15px 15px 0px;
+                    padding: 27px 19px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: white;
+                    width: 20px;
+                    height: 20px;
+                }   
+            }
+            @keyframes fly-in {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
                 }
             }
         }    

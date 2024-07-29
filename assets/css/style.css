@@ -87,7 +87,8 @@ a {
 
 .section-title {
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 24px;
+  line-height: 28.13px;
   padding-left: 1.313rem;
   margin: 0;
 }
@@ -186,13 +187,29 @@ header form input:focus {
   align-items: center;
   justify-content: center;
 }
+@media (min-width: 768px) {
+  .hero-acceuil {
+    padding-bottom: 20px;
+  }
+}
 .hero-acceuil h2 {
   font-weight: 700;
   font-size: 1.5rem;
 }
+@media (min-width: 768px) {
+  .hero-acceuil h2 {
+    font-size: 40px;
+    margin-top: 20px;
+  }
+}
 .hero-acceuil p {
   font-weight: 300;
   font-size: 1.125rem;
+}
+@media (min-width: 768px) {
+  .hero-acceuil p {
+    margin-top: 0px;
+  }
 }
 
 .fonctionnement {
@@ -208,7 +225,8 @@ header form input:focus {
   }
 }
 .fonctionnement .background-fontionnement {
-  max-width: 100%;
+  width: 100%;
+  max-width: 1080px;
 }
 .fonctionnement .background-fontionnement .box-fonctionnement {
   padding: 1.688rem 0.938rem 1.25rem 1.25rem;
@@ -252,6 +270,8 @@ header form input:focus {
 }
 .fonctionnement .background-fontionnement .box-fonctionnement .card-fonctionnement h4 {
   font-weight: 500;
+  font-size: 16px;
+  line-height: 18.75px;
   position: relative;
   left: -12px;
 }
@@ -276,18 +296,14 @@ header form input:focus {
     padding-bottom: 2rem;
     display: flex;
     justify-content: center;
+    flex-direction: initial;
   }
 }
 .restaurants .background-restaurants {
-  max-width: 100%;
-}
-.restaurants .background-restaurants .boite {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   width: 100%;
+  max-width: 1080px;
 }
-.restaurants .background-restaurants .boite .box-restaurants {
+.restaurants .background-restaurants .box-restaurants {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -298,33 +314,40 @@ header form input:focus {
   max-width: 1080px;
 }
 @media (min-width: 768px) {
-  .restaurants .background-restaurants .boite .box-restaurants {
+  .restaurants .background-restaurants .box-restaurants {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 35px;
+    gap: 50px;
+    row-gap: 35px;
   }
 }
 @media (min-width: 1024px) {
-  .restaurants .background-restaurants .boite .box-restaurants {
-    gap: 50px;
+  .restaurants .background-restaurants .box-restaurants {
+    gap: 100px;
+    row-gap: 50px;
   }
 }
-.restaurants .background-restaurants .boite .box-restaurants a {
+.restaurants .background-restaurants .box-restaurants a {
   width: 100%;
 }
-.restaurants .background-restaurants .boite .box-restaurants a .card-restaurant {
+.restaurants .background-restaurants .box-restaurants a .card-restaurant {
   position: relative;
   background-color: white;
   border-radius: 15px 15px 15px 15px;
   max-width: 100%;
 }
-.restaurants .background-restaurants .boite .box-restaurants a .card-restaurant img {
+@media (min-width: 1024px) {
+  .restaurants .background-restaurants .box-restaurants a .card-restaurant {
+    max-width: 490px;
+  }
+}
+.restaurants .background-restaurants .box-restaurants a .card-restaurant img {
   width: 100%;
   height: 174px;
   object-fit: cover;
   border-radius: 15px 15px 0px 0px;
 }
-.restaurants .background-restaurants .boite .box-restaurants a .card-restaurant .new {
+.restaurants .background-restaurants .box-restaurants a .card-restaurant .new {
   position: absolute;
   top: 15px;
   right: 15px;
@@ -337,22 +360,27 @@ header form input:focus {
   color: #008766;
   border-radius: 2px;
 }
-.restaurants .background-restaurants .boite .box-restaurants a .card-restaurant .info-restaurant {
+.restaurants .background-restaurants .box-restaurants a .card-restaurant .info-restaurant {
   display: flex;
   padding: 15px 0px 0px 10px;
   margin: 0px;
 }
-.restaurants .background-restaurants .boite .box-restaurants a .card-restaurant .info-restaurant .info-text-restaurant {
+.restaurants .background-restaurants .box-restaurants a .card-restaurant .info-restaurant .info-text-restaurant {
   width: 87%;
 }
-.restaurants .background-restaurants .boite .box-restaurants a .card-restaurant .info-restaurant .info-text-restaurant h4 {
+.restaurants .background-restaurants .box-restaurants a .card-restaurant .info-restaurant .info-text-restaurant h4 {
   font-weight: 700;
-  margin-bottom: 7px;
+  font-size: 18px;
+  line-height: 21.09px;
+  margin-bottom: 6px;
   margin-top: 0px;
 }
-.restaurants .background-restaurants .boite .box-restaurants a .card-restaurant .info-restaurant .info-text-restaurant p {
+.restaurants .background-restaurants .box-restaurants a .card-restaurant .info-restaurant .info-text-restaurant p {
   font-weight: 300;
   margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 17px;
+  line-height: 19.92px;
 }
 
 footer {
@@ -512,6 +540,7 @@ footer .box-footer .list-box-footer-2 {
 .menu .background-menu .box-plat .box-menu .plat-title {
   font-weight: 300;
   font-size: 16px;
+  line-height: 18.75px;
   margin-bottom: -7px;
   margin-top: 0px;
 }
@@ -526,35 +555,55 @@ footer .box-footer .list-box-footer-2 {
   border-radius: 15px;
   margin-top: 13px;
   display: flex;
-  padding: 15px 0px 0px 10px;
   box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.1);
-  animation: reveal linear;
+  animation: fly-in linear both;
   animation-timeline: view();
+  animation-range: entry 0% contain 100%;
 }
 .menu .background-menu .box-plat .box-menu .card-menu .info-menu {
   width: 87%;
 }
 .menu .background-menu .box-plat .box-menu .card-menu .info-menu h4 {
   font-weight: 700;
-  margin-bottom: 7px;
+  font-size: 18px;
+  line-height: 21.09px;
+  margin-bottom: 6px;
   margin-top: 0px;
+  padding-top: 15px;
+  padding-left: 15px;
 }
 .menu .background-menu .box-plat .box-menu .card-menu .info-menu p {
   font-weight: 300;
   margin-top: 0;
+  margin-bottom: 12px;
   font-size: 15px;
+  line-height: 17.63px;
+  padding-left: 15px;
 }
 .menu .background-menu .box-plat .box-menu .prix-menu {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
   padding-bottom: 15px;
+  padding-right: 15px;
+  padding-left: 40px;
   font-family: "Roboto", sans-serif;
   font-size: 15px;
   color: #353535;
   font-weight: 700;
 }
-@keyframes reveal {
+.menu .background-menu .box-plat .box-menu .check {
+  background-color: #99e2d0;
+  border-radius: 0px 15px 15px 0px;
+  padding: 27px 19px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  width: 20px;
+  height: 20px;
+}
+@keyframes fly-in {
   from {
     opacity: 0;
   }

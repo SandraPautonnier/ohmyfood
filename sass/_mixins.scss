@@ -78,13 +78,16 @@
 
 @mixin h4-card {
     font-weight: 700;
-    margin-bottom: 7px;
+    font-size: 18px;
+    line-height: 21.09px;
+    margin-bottom: 6px;
     margin-top: 0px;
 }
 
 @mixin p-card {
     font-weight: 300;
     margin-top: 0;
+    margin-bottom: 12px;
 }
 
 @mixin relative-12 {
