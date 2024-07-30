@@ -486,7 +486,7 @@ footer {
                     display: flex;
                     box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.10);
                     overflow: hidden;
-                    transition: transform 0.3s ease-in-out;
+                    
                     .check {
                         background-color: $tertiary-color;
                         border-radius: 0px 15px 15px 0px;
@@ -498,17 +498,17 @@ footer {
                         color: white;
                         width: 20px;
                         height: 20px;
-                        margin-right: -75px;
+                        margin-right: -70px;
+                        transition: all 0.3s ease-in;
                     }
                     input[type="checkbox"] {
                         display: none;
                     }
                     input[type="checkbox"]:checked~.check {
-                        margin: 0px; 
+                        margin: 0px;
+                        transition: all 0.3s ease-out;
                     }
-                    input[type="checkbox"]:checked~.check {
-                        margin: 0px; 
-                    }
+                    
                     .info-menu {
                         width: 87%;
                         h4 {

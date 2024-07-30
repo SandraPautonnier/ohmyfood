@@ -561,7 +561,6 @@ footer .box-footer .list-box-footer-2 {
   display: flex;
   box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition: transform 0.3s ease-in-out;
 }
 .menu .background-menu .box-plat .box-menu .card-menu .check {
   background-color: #99e2d0;
@@ -574,16 +573,15 @@ footer .box-footer .list-box-footer-2 {
   color: white;
   width: 20px;
   height: 20px;
-  margin-right: -75px;
+  margin-right: -70px;
+  transition: all 0.3s ease-in;
 }
 .menu .background-menu .box-plat .box-menu .card-menu input[type=checkbox] {
   display: none;
 }
 .menu .background-menu .box-plat .box-menu .card-menu input[type=checkbox]:checked ~ .check {
   margin: 0px;
-}
-.menu .background-menu .box-plat .box-menu .card-menu input[type=checkbox]:checked ~ .check {
-  margin: 0px;
+  transition: all 0.3s ease-out;
 }
 .menu .background-menu .box-plat .box-menu .card-menu .info-menu {
   width: 87%;
