@@ -85,6 +85,10 @@ a {
   text-decoration: none;
 }
 
+label {
+  cursor: pointer;
+}
+
 .section-title {
   font-weight: 700;
   font-size: 24px;
@@ -556,9 +560,30 @@ footer .box-footer .list-box-footer-2 {
   margin-top: 13px;
   display: flex;
   box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.1);
-  animation: fly-in linear both;
-  animation-timeline: view();
-  animation-range: entry 0% contain 100%;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+.menu .background-menu .box-plat .box-menu .card-menu .check {
+  background-color: #99e2d0;
+  border-radius: 0px 15px 15px 0px;
+  padding: 27px 19px;
+  border-left: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  width: 20px;
+  height: 20px;
+  margin-right: -75px;
+}
+.menu .background-menu .box-plat .box-menu .card-menu input[type=checkbox] {
+  display: none;
+}
+.menu .background-menu .box-plat .box-menu .card-menu input[type=checkbox]:checked ~ .check {
+  margin: 0px;
+}
+.menu .background-menu .box-plat .box-menu .card-menu input[type=checkbox]:checked ~ .check {
+  margin: 0px;
 }
 .menu .background-menu .box-plat .box-menu .card-menu .info-menu {
   width: 87%;
@@ -580,7 +605,7 @@ footer .box-footer .list-box-footer-2 {
   line-height: 17.63px;
   padding-left: 15px;
 }
-.menu .background-menu .box-plat .box-menu .prix-menu {
+.menu .background-menu .box-plat .box-menu .card-menu .prix-menu {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
@@ -592,17 +617,6 @@ footer .box-footer .list-box-footer-2 {
   color: #353535;
   font-weight: 700;
 }
-.menu .background-menu .box-plat .box-menu .check {
-  background-color: #99e2d0;
-  border-radius: 0px 15px 15px 0px;
-  padding: 27px 19px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  width: 20px;
-  height: 20px;
-}
 @keyframes fly-in {
   from {
     opacity: 0;
@@ -611,7 +625,7 @@ footer .box-footer .list-box-footer-2 {
     opacity: 1;
   }
 }
-.menu a {
+.menu .background-menu a {
   display: flex;
   justify-content: center;
   width: 140px;
