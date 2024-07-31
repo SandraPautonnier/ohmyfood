@@ -249,8 +249,17 @@ header {
                 border-radius: 20px;
                 gap: 25px;
                 justify-content: flex-start;
+                cursor: pointer;
                 @include flex-align;
                 @include box-shadow;
+                transition: all 0.3s ease-in-out;
+                &:hover {
+                    transform: scale(1.05);
+                    color: $main-color;
+                    i {
+                        color: $main-color;
+                    }
+                }
                 p {
                     width: 24px;
                     height: 24px;
@@ -322,6 +331,10 @@ header {
                     background-color: white;
                     border-radius: 15px 15px 15px 15px;
                     max-width: 100%;
+                    transition: all 0.3s ease-in-out;
+                    &:hover {
+                        @include box-shadow;
+                    }
                     @media (min-width: 1024px) {
                         max-width: 490px;
                     }
@@ -506,6 +519,8 @@ footer {
                     display: flex;
                     box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.10);
                     overflow: hidden;
+                    transition: all 0.3s;
+                    animation: anim-card-menu scroll() ease-in-out alternate;
                     
                     .check {
                         background-color: $tertiary-color;
@@ -556,16 +571,16 @@ footer {
                     font-weight: 700;
                 }
                 
-                  
+                @keyframes anim-card-menu {
+                    from {
+                      transform: opacity(0%) scale(0.1);
+                    }
+                    to {
+                      transform: opacity(100%) scale(1);
+                    }
+                } 
             }
-            @keyframes fly-in {
-                from {
-                    opacity: 0;
-                }
-                to {
-                    opacity: 1;
-                }
-            }
+            
         }    
     }
     a {

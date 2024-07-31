@@ -263,10 +263,19 @@ header form input:focus {
   border-radius: 20px;
   gap: 25px;
   justify-content: flex-start;
+  cursor: pointer;
   display: flex;
   flex-direction: row;
   align-items: center;
   box-shadow: 0px 3px 15px -5px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+.fonctionnement .background-fontionnement .box-fonctionnement .card-fonctionnement:hover {
+  transform: scale(1.05);
+  color: #9356dc;
+}
+.fonctionnement .background-fontionnement .box-fonctionnement .card-fonctionnement:hover i {
+  color: #9356dc;
 }
 .fonctionnement .background-fontionnement .box-fonctionnement .card-fonctionnement p {
   width: 24px;
@@ -355,6 +364,10 @@ header form input:focus {
   background-color: white;
   border-radius: 15px 15px 15px 15px;
   max-width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+.restaurants .background-restaurants .box-restaurants a .card-restaurant:hover {
+  box-shadow: 0px 3px 15px -5px rgba(0, 0, 0, 0.3);
 }
 @media (min-width: 1024px) {
   .restaurants .background-restaurants .box-restaurants a .card-restaurant {
@@ -578,6 +591,8 @@ footer .box-footer .list-box-footer-2 {
   display: flex;
   box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  transition: all 0.3s;
+  animation: anim-card-menu scroll() ease-in-out alternate;
 }
 .menu .background-menu .box-plat .box-menu .card-menu .check {
   background-color: #99e2d0;
@@ -635,12 +650,12 @@ footer .box-footer .list-box-footer-2 {
   color: #353535;
   font-weight: 700;
 }
-@keyframes fly-in {
+@keyframes anim-card-menu {
   from {
-    opacity: 0;
+    transform: opacity(0%) scale(0.1);
   }
   to {
-    opacity: 1;
+    transform: opacity(100%) scale(1);
   }
 }
 .menu .background-menu a {
