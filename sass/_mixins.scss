@@ -60,7 +60,7 @@
 @mixin text-form {
     font-family: "Roboto", sans-serif;
     font-size: 15px;
-    color: $background-dark-grey;
+    color: $background-dark-grey !important;
 }
 
 @mixin title-h1-resto {
@@ -93,6 +93,13 @@
 @mixin relative-12 {
     position: relative;
     left: -12px;
+}
+
+@mixin overflow-ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    
 }
 
 @mixin footer-mobile {

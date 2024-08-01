@@ -1,7 +1,6 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
 body .loader-container {
-  display: none;
+  display: flex;
   position: fixed;
   top: 0px;
   left: 0;
@@ -11,7 +10,9 @@ body .loader-container {
   background-color: white;
   justify-content: center;
   align-items: center;
-  transition: opacity 1s ease-in-out;
+  align-content: center;
+  transition: opacity 3s ease-in-out;
+  animation: loader-container 3s 1 forwards;
 }
 body .loader-container .let {
   font-family: "Shrikhand", serif;
@@ -47,6 +48,17 @@ body .loader-container .l8 {
 @keyframes loader {
   100% {
     transform: translateY(-30px);
+  }
+}
+@keyframes loader-container {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+  }
+  99% {
+    opacity: 0.01;
+    visibility: hidden;
   }
 }
 
@@ -113,7 +125,7 @@ button:required input {
   border: none;
   border-radius: 50px;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 18.75px;
   color: white;
   padding: 17px 25px;
@@ -163,43 +175,20 @@ header {
 }
 header .title-main {
   position: relative;
+  padding-bottom: 3px;
   z-index: 1;
   width: 100%;
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
 }
-header form {
-  background-color: #eaeaea;
-  width: 100%;
-  height: 50px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.25));
-}
-header form input {
-  background-color: #eaeaea;
-  border: none;
-  text-align: end;
-  width: 130px;
-  height: 40px;
-}
-header form input::placeholder {
-  font-family: "Roboto", sans-serif;
-  font-size: 15px;
-  color: #353535;
-  font-weight: 500;
-}
-header form input:focus {
-  outline: none;
-  font-family: "Roboto", sans-serif;
-  font-size: 15px;
-  color: #353535;
-  font-weight: 500;
+@media (min-width: 768px) {
+  header .title-main {
+    padding-bottom: 7px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0);
+  }
 }
 
 .hero-acceuil {
-  padding: 1.2rem 1.875rem 2.5rem;
+  padding: 0rem 0rem 2.5rem;
   text-align: center;
   background-color: #f6f6f6;
   display: flex;
@@ -212,17 +201,58 @@ header form input:focus {
     padding-bottom: 20px;
   }
 }
+.hero-acceuil form {
+  background-color: #eaeaea;
+  color: #353535;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.25));
+}
+.hero-acceuil form input {
+  background-color: #eaeaea;
+  color: #353535;
+  border: none;
+  text-align: end;
+  width: 130px;
+  height: 50px;
+}
+.hero-acceuil form input::placeholder {
+  color: #353535;
+  font-weight: 500;
+}
+.hero-acceuil form input:focus {
+  outline: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  color: #353535 !important;
+  font-weight: 500;
+}
+@media (min-width: 768px) {
+  .hero-acceuil form {
+    filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0));
+  }
+}
 .hero-acceuil h2 {
+  padding: 20px 20px 0px;
+  margin-bottom: 0px;
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 24px;
+  line-height: 28.13px;
+  text-align: center;
 }
 @media (min-width: 768px) {
   .hero-acceuil h2 {
     font-size: 40px;
     margin-top: 20px;
+    margin-bottom: 30px;
   }
 }
 .hero-acceuil p {
+  padding: 0px 20px 0px;
   font-weight: 300;
   font-size: 1.125rem;
 }
@@ -261,7 +291,7 @@ header form input:focus {
   height: 72.38px;
   background-color: #f6f6f6;
   border-radius: 20px;
-  gap: 25px;
+  gap: 30px;
   justify-content: flex-start;
   cursor: pointer;
   display: flex;
@@ -591,8 +621,7 @@ footer .box-footer .list-box-footer-2 {
   display: flex;
   box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition: all 0.3s;
-  animation: anim-card-menu scroll() ease-in-out alternate;
+  animation: anim-card-menu 1s alternate;
 }
 .menu .background-menu .box-plat .box-menu .card-menu .check {
   background-color: #99e2d0;
@@ -618,8 +647,6 @@ footer .box-footer .list-box-footer-2 {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  white-space: nowrap;
-  text-overflow: "…" "…";
 }
 .menu .background-menu .box-plat .box-menu .card-menu .info-menu h4 {
   font-weight: 700;
@@ -629,6 +656,9 @@ footer .box-footer .list-box-footer-2 {
   margin-top: 0px;
   padding-top: 15px;
   padding-left: 15px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .menu .background-menu .box-plat .box-menu .card-menu .info-menu p {
   font-weight: 300;
@@ -637,6 +667,29 @@ footer .box-footer .list-box-footer-2 {
   font-size: 15px;
   line-height: 17.63px;
   padding-left: 15px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.menu .background-menu .box-plat .box-menu .card-menu .menu1 {
+  animation-delay: 0.1s;
+}
+.menu .background-menu .box-plat .box-menu .card-menu .menu2 {
+  animation-delay: 0.2s;
+}
+.menu .background-menu .box-plat .box-menu .card-menu .menu3 {
+  animation-delay: 0.3s;
+}
+.menu .background-menu .box-plat .box-menu .card-menu .menu4 {
+  animation-delay: 0.4s;
+}
+@keyframes anim-card-menu {
+  0% {
+    transform: translateX(-9999px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 .menu .background-menu .box-plat .box-menu .card-menu .prix-menu {
   display: flex;
@@ -647,16 +700,8 @@ footer .box-footer .list-box-footer-2 {
   padding-left: 40px;
   font-family: "Roboto", sans-serif;
   font-size: 15px;
-  color: #353535;
+  color: #353535 !important;
   font-weight: 700;
-}
-@keyframes anim-card-menu {
-  from {
-    transform: opacity(0%) scale(0.1);
-  }
-  to {
-    transform: opacity(100%) scale(1);
-  }
 }
 .menu .background-menu a {
   display: flex;
