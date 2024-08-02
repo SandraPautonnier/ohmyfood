@@ -113,7 +113,7 @@ label {
 button {
   border: none;
   background-color: rgba(255, 255, 255, 0);
-  padding: 17px 25px;
+  padding: 0px;
   margin: 1rem 1.5rem;
 }
 button:required input {
@@ -144,12 +144,34 @@ button:required input {
 }
 
 .btn-fav {
-  font-size: 20px;
+  font-size: 22px;
   padding-left: 5px;
+  animation: remplissage 5s ease-in-out;
+}
+.btn-fav:hover i.fa-solid.fa-heart.full {
+  display: inline-block;
+  background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+@keyframes remplissage {
+  100% {
+    transform: scaleY(1) translateY(1);
+  }
+}
+.btn-fav:hover i.fa-regular.fa-heart.nofull {
+  display: none;
+}
+@keyframes remplissage {
+  100% {
+    transform: scaleY(1) translateY(1);
+  }
 }
 .btn-fav input[type=checkbox], .btn-fav i.fa-solid.fa-heart.full {
   display: none;
-  transform: scaleY(1);
 }
 .btn-fav input[type=checkbox]:checked ~ .full {
   display: inline-block;
@@ -157,11 +179,8 @@ button:required input {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-.btn-fav input[type=checkbox]:checked ~ .full:active {
-  transform-origin: 50% bottom;
-  transform: scaleY(1);
-  transition: transform 1000ms ease-in-out;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
 }
 .btn-fav input[type=checkbox]:checked ~ .nofull {
   display: none;
@@ -210,18 +229,22 @@ header .title-main {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  padding-left: 10px;
+  gap: 15px;
   filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.25));
 }
 .hero-acceuil form input {
   background-color: #eaeaea;
   color: #353535;
   border: none;
-  text-align: end;
+  text-align: start;
   width: 130px;
-  height: 50px;
+  height: 45px;
 }
 .hero-acceuil form input::placeholder {
-  color: #353535;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  color: #353535 !important;
   font-weight: 500;
 }
 .hero-acceuil form input:focus {
@@ -284,14 +307,21 @@ header .title-main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 25px;
+}
+@media (min-width: 768px) {
+  .fonctionnement .background-fontionnement .box-fonctionnement {
+    display: flex;
+    flex-direction: row;
+    gap: 35px;
+  }
 }
 .fonctionnement .background-fontionnement .box-fonctionnement .card-fonctionnement {
   width: 322.49px;
   height: 72.38px;
   background-color: #f6f6f6;
   border-radius: 20px;
-  gap: 30px;
+  gap: 25px;
   justify-content: flex-start;
   cursor: pointer;
   display: flex;
@@ -334,13 +364,6 @@ header .title-main {
   position: relative;
   left: -12px;
 }
-@media (min-width: 768px) {
-  .fonctionnement .background-fontionnement .box-fonctionnement {
-    display: flex;
-    flex-direction: row;
-    gap: 1.875rem;
-  }
-}
 
 .restaurants {
   background-color: #f6f6f6;
@@ -367,7 +390,7 @@ header .title-main {
   flex-direction: column;
   justify-content: center;
   gap: 20px;
-  padding: 1.688rem 1.5rem 0rem 1.5rem;
+  padding: 25px 18px 0px 18px;
   box-sizing: border-box;
   width: 100%;
   max-width: 1080px;
@@ -408,6 +431,7 @@ header .title-main {
   width: 100%;
   height: 174px;
   object-fit: cover;
+  object-position: 50% 60%;
   border-radius: 15px 15px 0px 0px;
 }
 .restaurants .background-restaurants .box-restaurants a .card-restaurant .new {
@@ -425,8 +449,13 @@ header .title-main {
 }
 .restaurants .background-restaurants .box-restaurants a .card-restaurant .info-restaurant {
   display: flex;
-  padding: 15px 0px 0px 10px;
+  padding: 15px 0px 5px 15px;
   margin: 0px;
+}
+@media (min-width: 1024px) {
+  .restaurants .background-restaurants .box-restaurants a .card-restaurant .info-restaurant {
+    padding-left: 20px;
+  }
 }
 .restaurants .background-restaurants .box-restaurants a .card-restaurant .info-restaurant .info-text-restaurant {
   width: 87%;
@@ -435,13 +464,13 @@ header .title-main {
   font-weight: 700;
   font-size: 18px;
   line-height: 21.09px;
-  margin-bottom: 6px;
+  margin-bottom: 5px;
   margin-top: 0px;
 }
 .restaurants .background-restaurants .box-restaurants a .card-restaurant .info-restaurant .info-text-restaurant p {
   font-weight: 300;
   margin-top: 0;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   font-size: 17px;
   line-height: 19.92px;
 }
@@ -514,7 +543,7 @@ footer .box-footer .list-box-footer-1 {
 @media (min-width: 768px) {
   footer .box-footer .list-box-footer-1 {
     flex-direction: row;
-    gap: 12px;
+    gap: 17px;
   }
 }
 footer .box-footer .list-box-footer-2 {
@@ -527,7 +556,7 @@ footer .box-footer .list-box-footer-2 {
 @media (min-width: 768px) {
   footer .box-footer .list-box-footer-2 {
     flex-direction: row;
-    gap: 12px;
+    gap: 17px;
   }
 }
 
@@ -621,7 +650,6 @@ footer .box-footer .list-box-footer-2 {
   display: flex;
   box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  animation: anim-card-menu 1s alternate;
 }
 .menu .background-menu .box-plat .box-menu .card-menu .check {
   background-color: #99e2d0;
@@ -652,7 +680,7 @@ footer .box-footer .list-box-footer-2 {
   font-weight: 700;
   font-size: 18px;
   line-height: 21.09px;
-  margin-bottom: 6px;
+  margin-bottom: 5px;
   margin-top: 0px;
   padding-top: 15px;
   padding-left: 15px;
@@ -663,33 +691,13 @@ footer .box-footer .list-box-footer-2 {
 .menu .background-menu .box-plat .box-menu .card-menu .info-menu p {
   font-weight: 300;
   margin-top: 0;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   font-size: 15px;
   line-height: 17.63px;
   padding-left: 15px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-}
-.menu .background-menu .box-plat .box-menu .card-menu .menu1 {
-  animation-delay: 0.1s;
-}
-.menu .background-menu .box-plat .box-menu .card-menu .menu2 {
-  animation-delay: 0.2s;
-}
-.menu .background-menu .box-plat .box-menu .card-menu .menu3 {
-  animation-delay: 0.3s;
-}
-.menu .background-menu .box-plat .box-menu .card-menu .menu4 {
-  animation-delay: 0.4s;
-}
-@keyframes anim-card-menu {
-  0% {
-    transform: translateX(-9999px);
-  }
-  100% {
-    transform: translateX(0);
-  }
 }
 .menu .background-menu .box-plat .box-menu .card-menu .prix-menu {
   display: flex;
@@ -713,6 +721,73 @@ footer .box-footer .list-box-footer-2 {
   margin-bottom: 2.5rem;
 }
 
+.plat-title {
+  animation: anim-card-menu 2.7s alternate;
+  animation-fill-mode: backwards;
+}
+
+.line-title {
+  animation: anim-card-menu 2.7s alternate;
+  animation-fill-mode: backwards;
+}
+
+.card-menu {
+  animation: anim-card-menu 2.7s alternate;
+  animation-fill-mode: backwards;
+}
+
+.anim2 {
+  animation-delay: 0.3s;
+}
+
+.anim3 {
+  animation-delay: 0.6s;
+}
+
+.anim4 {
+  animation-delay: 0.9s;
+}
+
+.anim5 {
+  animation-delay: 1.2s;
+}
+
+.anim6 {
+  animation-delay: 1.5s;
+}
+
+.anim7 {
+  animation-delay: 1.8s;
+}
+
+.anim8 {
+  animation-delay: 2.1s;
+}
+
+.anim9 {
+  animation-delay: 2.4s;
+}
+
+.anim10 {
+  animation-delay: 2.7s;
+}
+
+.anim11 {
+  animation-delay: 3s;
+}
+
+.anim12 {
+  animation-delay: 3.3s;
+}
+
+@keyframes anim-card-menu {
+  0% {
+    transform: translateX(-9999px);
+  }
+  100% {
+    transform: scaleX(1) translateX(0);
+  }
+}
 .main-page footer {
   margin-top: -50px;
 }

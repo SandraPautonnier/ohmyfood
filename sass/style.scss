@@ -115,10 +115,12 @@ label {
     padding-left: 1.313rem;
     margin: 0;
 }
+
+
 button {
     border: none;
     background-color: rgb(255, 255, 255,0);
-    padding: 17px 25px;
+    padding: 0px;
     margin: 1rem 1.5rem;
     &:required {
         input {
@@ -154,26 +156,43 @@ button {
 }
 
 .btn-fav {
-    font-size: 20px;
+    font-size: 22px;
     padding-left: 5px;
+    animation: remplissage 5s ease-in-out;
+    &:hover {
+        i.fa-solid.fa-heart.full {
+            display: inline-block;
+            @include color-gradient;
+            @include text-transparent;
+            @keyframes remplissage {
+                100% {
+                    transform: scaleY(1) translateY(1);
+                }
+            } 
+        }
+        
+        i.fa-regular.fa-heart.nofull {
+            display: none;
+        }
+        
+    }
+    @keyframes remplissage {
+        100% {
+            transform: scaleY(1) translateY(1);
+        }
+    } 
     input[type="checkbox"], i.fa-solid.fa-heart.full {
         display: none;
-        transform: scaleY(1);
+        
     }
     input[type="checkbox"]:checked~.full {
         display: inline-block;
         @include color-gradient;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        &:active {
-            transform-origin: 50% bottom;
-            transform: scaleY(1);
-            transition: transform 1000ms ease-in-out; 
-        }
+        @include text-transparent;
     }
     input[type="checkbox"]:checked~.nofull {
-        display: none;  
+        display: none;
+          
     }
 }
 
@@ -211,16 +230,18 @@ header {
         height: 50px;
         @include flex-align;
         justify-content: center;
+        padding-left: 10px;
+        gap: 15px;
         filter: drop-shadow( 0px 4px 2px rgba(0,0,0,0.25));
         input {
             background-color: $background-location;
             color: $background-dark-grey;
             border: none;
-            text-align: end;
+            text-align: start;
             width: 130px;
-            height: 50px;
+            height: 45px;
             &::placeholder {
-                color: $background-dark-grey;
+                @include text-form;
                 font-weight: 500;  
             }
             &:focus {
@@ -271,13 +292,17 @@ header {
         .box-fonctionnement {
             padding: 1.688rem 0.938rem 1.25rem 1.25rem;
             @include flex-center;
-            gap: 1.5rem;
+            gap: 25px;
+            @media (min-width: 768px) {
+                @include flex-row;
+                gap: 35px;
+            } 
             .card-fonctionnement {
                 width: 322.49px;
                 height: 72.38px;
                 background-color: $background-light-grey;
                 border-radius: 20px;
-                gap: 30px;
+                gap: 25px;
                 justify-content: flex-start;
                 cursor: pointer;
                 @include flex-align;
@@ -315,10 +340,7 @@ header {
                     @include relative-12;
                 }
             }
-            @media (min-width: 768px) {
-                @include flex-row;
-                gap: 1.875rem;
-            } 
+            
         }
     }
 }
@@ -340,7 +362,7 @@ header {
             @include flex-colunm;
             justify-content: center;
             gap: 20px;
-            padding: 1.688rem 1.5rem 0rem 1.5rem;
+            padding: 25px 18px 0px 18px;
             box-sizing: border-box;
             width: 100%;
             max-width: 1080px;
@@ -372,6 +394,7 @@ header {
                         width: 100%;
                         height: 174px;
                         object-fit: cover;
+                        object-position: 50% 60%;
                         border-radius: 15px 15px 0px 0px;
                     }
                     .new {
@@ -390,6 +413,9 @@ header {
                     .info-restaurant {
                         @include padding-card;
                         margin: 0px;
+                        @media (min-width: 1024px) {
+                            padding-left: 20px;
+                        }
                         .info-text-restaurant {
                             width: 87%;
                             h4 {
@@ -550,7 +576,6 @@ footer {
                     display: flex;
                     box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.10);
                     overflow: hidden;
-                    animation: anim-card-menu 1s alternate;
                     
                     .check {
                         background-color: $tertiary-color;
@@ -589,26 +614,7 @@ footer {
                             @include overflow-ellipsis;
                         }
                     }
-                .menu1 {
-                    animation-delay: 0.10s;
-                }
-                .menu2 {
-                    animation-delay: 0.20s;
-                }
-                .menu3 {
-                    animation-delay: 0.30s;
-                }
-                .menu4 {
-                    animation-delay: 0.40s;
-                }
-                @keyframes anim-card-menu {
-                    0% {
-                        transform: translateX(-9999px);
-                    }
-                    100% {
-                        transform: translateX(0);
-                    }
-                }     
+                    
                 .prix-menu {
                     display: flex;
                     justify-content: flex-end;
@@ -634,6 +640,58 @@ footer {
     }
 }
 }
+
+//Animations
+.plat-title {
+    @include anim-card-menu;
+}
+.line-title {
+    @include anim-card-menu;
+}
+.card-menu {
+    @include anim-card-menu; 
+}
+.anim2 {
+    animation-delay: 0.3s;
+}
+.anim3 {
+    animation-delay: 0.6s;
+}
+.anim4 {
+    animation-delay: 0.9s;
+}
+.anim5 {
+    animation-delay: 1.2s;
+}
+.anim6 {
+    animation-delay: 1.5s;
+}
+.anim7 {
+    animation-delay: 1.8s;
+}
+.anim8 {
+    animation-delay: 2.1s;
+}
+.anim9 {
+    animation-delay: 2.4s;
+}
+.anim10 {
+    animation-delay: 2.7s;
+}
+.anim11 {
+    animation-delay: 3s;
+}
+.anim12 {
+    animation-delay: 3.3s;
+}
+@keyframes anim-card-menu {
+    0% {
+        transform: translateX(-9999px);
+    }
+    100% {
+        transform: scaleX(1) translateX(0);
+    }
+} 
 
 .main-page {
     footer {

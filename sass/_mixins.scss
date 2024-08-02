@@ -42,6 +42,14 @@
     background: linear-gradient(0deg, $main-color 0%, $secondary-color 100%);
 }
 
+@mixin text-transparent {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+
 @mixin box-radius {
     border-radius: 30px;
 }
@@ -72,7 +80,7 @@
 
 @mixin padding-card {
     display: flex;
-    padding: 15px 0px 0px 10px;
+    padding: 15px 0px 5px 15px;
     
 }
 
@@ -80,14 +88,14 @@
     font-weight: 700;
     font-size: 18px;
     line-height: 21.09px;
-    margin-bottom: 6px;
+    margin-bottom: 5px;
     margin-top: 0px;
 }
 
 @mixin p-card {
     font-weight: 300;
     margin-top: 0;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
 @mixin relative-12 {
@@ -111,5 +119,11 @@
 
 @mixin footer-tablette {
     flex-direction: row;
-    gap: 12px;
+    gap: 17px;
 }
+
+@mixin anim-card-menu {
+    animation: anim-card-menu 2.7s alternate; 
+    animation-fill-mode: backwards;
+}
+
