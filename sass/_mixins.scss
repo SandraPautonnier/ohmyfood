@@ -42,12 +42,17 @@
     background: linear-gradient(0deg, $main-color 0%, $secondary-color 100%);
 }
 
+@mixin hover-gradient {
+    background-image: linear-gradient(to top, transparent 34%, $main-color 33%, $secondary-color 33%);
+}
+
 @mixin text-transparent {
     background-clip: text;
+    color: transparent;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    
     -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
+    
 }
 
 @mixin box-radius {

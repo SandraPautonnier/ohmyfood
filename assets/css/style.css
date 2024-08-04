@@ -146,44 +146,43 @@ button:required input {
 .btn-fav {
   font-size: 22px;
   padding-left: 5px;
-  animation: remplissage 5s ease-in-out;
 }
-.btn-fav:hover i.fa-solid.fa-heart.full {
-  display: inline-block;
-  background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
+.btn-fav input[type=checkbox] {
+  display: none;
+}
+.btn-fav i.fa-solid.fa-heart.full {
+  -webkit-text-stroke: 1px #222;
   background-clip: text;
+  color: transparent;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
 }
-@keyframes remplissage {
-  100% {
-    transform: scaleY(1) translateY(1);
+.btn-fav i.fa-solid.fa-heart.full:hover {
+  background-image: linear-gradient(to top, transparent 34%, #9356dc 33%, #ff79da 33%);
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  animation: background-position 3s ease-in-out;
+  background-size: 1% 100%;
+}
+@keyframes background-position {
+  0% {
+    background-position: 0 0;
   }
-}
-.btn-fav:hover i.fa-regular.fa-heart.nofull {
-  display: none;
-}
-@keyframes remplissage {
   100% {
-    transform: scaleY(1) translateY(1);
+    background-position: 0 30%;
   }
-}
-.btn-fav input[type=checkbox], .btn-fav i.fa-solid.fa-heart.full {
-  display: none;
 }
 .btn-fav input[type=checkbox]:checked ~ .full {
   display: inline-block;
   background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
   background-clip: text;
+  color: transparent;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
-}
-.btn-fav input[type=checkbox]:checked ~ .nofull {
-  display: none;
+  -webkit-text-stroke: 0.5px transparent;
+  opacity: 1;
 }
 
 header {
@@ -578,11 +577,6 @@ footer .box-footer .list-box-footer-2 {
 @media (min-width: 768px) {
   .heros img {
     height: 383px;
-  }
-}
-@media (min-width: 768px) {
-  .heros img {
-    padding-bottom: 20px;
   }
 }
 
