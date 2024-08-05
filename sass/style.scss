@@ -104,6 +104,10 @@ a {
     text-decoration: none;
 }
 
+img {
+    object-fit: cover;
+}
+
 label {
     cursor: pointer;
 }
@@ -147,54 +151,39 @@ button {
         0px 0px 50px 30px rgb(255, 255, 255,0.25) inset; 
         transition-timing-function: cubic-bezier(.63,-0.02,.35,.99);
     }
-    &:required {
-        input {
+    &:focus {
+        label {
             background-color: $fond-alerte-light;
             border: 2px solid $fond-alerte-sombre;
         }
     }
 }
 
-
-
-
 .btn-fav {
     font-size: 22px;
-    padding-left: 5px;
-    input[type="checkbox"] {
-        display: none; 
-    }
-    i.fa-solid.fa-heart.full {
+    user-select: none;
+    .fa-solid.fa-heart.full {
         -webkit-text-stroke: 1px #222; 
         @include text-transparent;
-        
+        transition: background-position 3s ease-in-out alternate;
+        background-size: 100% 200%;
         &:hover {
-            @include hover-gradient;
+            background-image: linear-gradient(to bottom, transparent 0%, transparent 50%, #9356dc 50%, #ff79da 100%);
+            -webkit-text-stroke: 1px transparent;
             @include text-transparent;
-            animation: background-position 3s ease-in-out;
-            background-size: 1% 100%;
-            @keyframes background-position {
-                0% {
-                    background-position: 0 0;
-                }
-                100% {
-                    background-position: 0 30%;
-                    
-                    
-                }
-            }
+            background-position: 0 100%;
             
         }
-        
+    }
+    input[type="checkbox"] {
+        display: none;
     }
     input[type="checkbox"]:checked~.full {
         display: inline-block;
         @include color-gradient;
         @include text-transparent;
-        -webkit-text-stroke: 0.5px transparent;
-        opacity: 1;
+        -webkit-text-stroke: 1px transparent;
     }
-    
     
 }
 
@@ -212,7 +201,13 @@ header {
             box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.0);
         }
     }
-
+    .btn-back {
+        position: absolute;
+        left: 30px;
+        top: 25px;
+        font-weight: bold;
+        font-size: 20px;
+    }
     
 }
 
@@ -223,7 +218,7 @@ header {
     background-color: $background-light-grey;
     @include flex-center;
     @media (min-width: 768px) {
-        padding-bottom: 20px;
+        padding-bottom: 30px;
     } 
     form {
         background-color: $background-location;
@@ -250,6 +245,10 @@ header {
                 outline: none;
                 @include text-form;
                 font-weight: 500;
+            }
+            &:active {
+                @include text-form;
+                font-weight: 500;  
             }
         }
         @media (min-width: 768px) {
@@ -395,7 +394,7 @@ header {
                     img {
                         width: 100%;
                         height: 174px;
-                        object-fit: cover;
+                        
                         object-position: 50% 60%;
                         border-radius: 15px 15px 0px 0px;
                     }
@@ -493,14 +492,6 @@ footer {
 }
 
 //Pages Resto
-//header
-.btn-back {
-    position: absolute;
-    left: 30px;
-    top: 25px;
-    font-weight: bold;
-    font-size: 20px;
-}
 
 //heros
 .heros{
