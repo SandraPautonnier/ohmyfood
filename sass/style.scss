@@ -101,9 +101,7 @@ img {
     object-fit: cover;
 }
 
-label {
-    cursor: pointer;
-}
+
 
 .section-title {
     font-weight: 700;
@@ -141,10 +139,10 @@ button {
 
 .btn-fav {
     font-size: 22px;
+    cursor: pointer;
     .fa-solid.fa-heart.full {
         -webkit-text-stroke: 1px #222; 
         @include text-transparent;
-        transition: all 3s ease-in-out alternate;
         &:hover {
             @include color-gradient;
             -webkit-text-stroke: 1px transparent;
@@ -338,10 +336,10 @@ header {
         flex-direction: initial;
     } 
     .background-restaurants {
-        @include 100-1080;
+        @include w100-1080;
         .box-restaurants {
             @include flex-colunm;
-            @include 100-1080;
+            @include w100-1080;
             justify-content: center;
             gap: 20px;
             padding: 25px 18px 0px 18px;
@@ -358,6 +356,7 @@ header {
             }
             a {
                 width: 100%;
+               
                 .card-restaurant {
                     position: relative;
                     background-color: white;
@@ -406,9 +405,11 @@ header {
                                 line-height: 19.92px;
                             }
                         }
-                    } 
+                    }
+                     
                 }
             }
+            
         }
         
     } 
