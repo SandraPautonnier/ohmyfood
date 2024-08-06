@@ -1,5 +1,15 @@
 @import "./_variables.scss";
 
+@mixin no-pad-marg {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin 100-1080 {
+    width: 100%;
+    max-width: 1080px;
+}
+
 @mixin flex-center {
     display: flex;
     flex-direction: column;
@@ -69,7 +79,6 @@
     padding-bottom: 2rem;
 }
 
-
 @mixin text-form {
     font-family: "Roboto", sans-serif;
     font-size: 15px;
@@ -78,6 +87,7 @@
     fill: $background-dark-grey;
     text-decoration: none;
     -moz-text-fill-color: $background-dark-grey;
+    font-weight: 500; 
 }
 
 @mixin title-h1-resto {

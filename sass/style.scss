@@ -52,7 +52,6 @@ body {
         @keyframes loader {
             100% {
                 transform: translateY(-30px);
-                
             }
         }
     }
@@ -61,11 +60,6 @@ body {
             opacity: 0;
             visibility: hidden;
             display: none;
-        
-        }
-        99% {
-            opacity: 0.01;
-            visibility: hidden;
         }
     }
 }
@@ -77,9 +71,7 @@ body {
     @include flex-center;
     background-color: white;
     width: 100%;
-    margin: 0;
-    padding: 0;
-    
+    @include no-pad-marg;
 }
 
 .main-container {
@@ -124,26 +116,19 @@ label {
 
 button {
     border: none;
-    background-color: rgb(255, 255, 255,0);
-    padding: 0px;
-    margin: 1rem 1.5rem;
-    &:required {
-        input {
-            background-color: $fond-alerte-light;
-            border: 2px solid $fond-alerte-sombre;
-        }
-    }
+    background-color: transparent;
+    @include no-pad-marg;
 }
 
 .btn-main {
+    padding: 16px 23px;
     border: none;
     border-radius: 50px;
     font-weight: 500;
     font-size: 16px;
     line-height: 18.75px;
     color: white;
-    padding: 17px 25px;
-    margin: 1rem 1.5rem;
+    margin: 0;
     @include color-gradient;
     box-shadow: 0px 10px 10px -5px rgba(0,0,0,0.27);
     transition: all 0.3s;
@@ -151,12 +136,6 @@ button {
         box-shadow: 0px 7px 12px -2px rgba(0,0,0,0.35),
         0px 0px 50px 30px rgb(255, 255, 255,0.25) inset; 
         transition-timing-function: cubic-bezier(.63,-0.02,.35,.99);
-    }
-    &:focus {
-        label {
-            background-color: $fond-alerte-light;
-            border: 2px solid $fond-alerte-sombre;
-        }
     }
 }
 
@@ -200,6 +179,7 @@ header {
     }
     .btn-back {
         position: absolute;
+        z-index: 999;
         left: 30px;
         top: 25px;
         font-weight: bold;
@@ -236,16 +216,13 @@ header {
             height: 45px;
             &::placeholder {
                 @include text-form;
-                font-weight: 500;  
             }
             &:focus {
                 outline: none;
                 @include text-form;
-                font-weight: 500;
             }
             &:active {
-                @include text-form;
-                font-weight: 500;  
+                @include text-form; 
             }
         }
         @media (min-width: 768px) {
@@ -273,6 +250,13 @@ header {
         @media (min-width: 768px) {
             margin-top: 0px;
         } 
+    }
+    button {
+        margin: 14px 24px;
+        padding: 15px 24px;
+        @media (min-width: 768px) {
+            padding-bottom: 0px;
+        }
     }
 }
 
@@ -354,16 +338,14 @@ header {
         flex-direction: initial;
     } 
     .background-restaurants {
-        width: 100%;
-        max-width: 1080px;
+        @include 100-1080;
         .box-restaurants {
             @include flex-colunm;
+            @include 100-1080;
             justify-content: center;
             gap: 20px;
             padding: 25px 18px 0px 18px;
             box-sizing: border-box;
-            width: 100%;
-            max-width: 1080px;
             @media (min-width: 768px) {
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
@@ -414,7 +396,7 @@ header {
                             padding-left: 20px;
                         }
                         .info-text-restaurant {
-                            width: 87%;
+                            width: 90%;
                             h4 {
                                 @include h4-card;
                             }
@@ -540,6 +522,7 @@ footer {
             width: 634px;
             padding-left: 13px;
             padding-right: 13px;
+            
             .box-menu {
                 max-width: 100%;
                 width: 634px;
@@ -566,7 +549,6 @@ footer {
                     display: flex;
                     box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.10);
                     overflow: hidden;
-                    
                     .check {
                         background-color: $tertiary-color;
                         border-radius: 0px 15px 15px 0px;
@@ -604,7 +586,6 @@ footer {
                             @include overflow-ellipsis;
                         }
                     }
-                    
                 .prix-menu {
                     display: flex;
                     justify-content: flex-end;
@@ -642,41 +623,41 @@ footer {
     @include anim-card-menu; 
 }
 .anim2 {
-    animation-delay: 0.3s;
+    animation-delay: 0.2s;
 }
 .anim3 {
-    animation-delay: 0.6s;
+    animation-delay: 0.4s;
 }
 .anim4 {
-    animation-delay: 0.9s;
+    animation-delay: 0.6s;
 }
 .anim5 {
-    animation-delay: 1.2s;
+    animation-delay: 1s;
 }
 .anim6 {
-    animation-delay: 1.5s;
+    animation-delay: 1.2s;
 }
 .anim7 {
-    animation-delay: 1.8s;
+    animation-delay: 1.4s;
 }
 .anim8 {
-    animation-delay: 2.1s;
+    animation-delay: 1.6s;
 }
 .anim9 {
-    animation-delay: 2.4s;
+    animation-delay: 2s;
 }
 .anim10 {
-    animation-delay: 2.7s;
+    animation-delay: 2.2s;
 }
 .anim11 {
-    animation-delay: 3s;
+    animation-delay: 2.4s;
 }
 .anim12 {
-    animation-delay: 3.3s;
+    animation-delay: 2.6s;
 }
 @keyframes anim-card-menu {
     0% {
-        transform: translateX(-9999px);
+        transform: translateX(-99999px);
     }
     100% {
         transform: scaleX(1) translateX(0);
