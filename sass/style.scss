@@ -102,6 +102,7 @@ h1 {
 a {
     color: inherit;
     text-decoration: none;
+    cursor: pointer;
 }
 
 img {
@@ -161,18 +162,14 @@ button {
 
 .btn-fav {
     font-size: 22px;
-    user-select: none;
     .fa-solid.fa-heart.full {
         -webkit-text-stroke: 1px #222; 
         @include text-transparent;
-        transition: background-position 3s ease-in-out alternate;
-        background-size: 100% 200%;
+        transition: all 3s ease-in-out alternate;
         &:hover {
-            background-image: linear-gradient(to bottom, transparent 0%, transparent 50%, #9356dc 50%, #ff79da 100%);
+            @include color-gradient;
             -webkit-text-stroke: 1px transparent;
             @include text-transparent;
-            background-position: 0 100%;
-            
         }
     }
     input[type="checkbox"] {
@@ -184,7 +181,6 @@ button {
         @include text-transparent;
         -webkit-text-stroke: 1px transparent;
     }
-    
 }
 
 //header
@@ -196,6 +192,7 @@ header {
         z-index: 1;
         width: 100%;
         box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
+        user-select: none;
         @media (min-width: 768px) {
             padding-bottom: 7px;
             box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.0);
@@ -394,7 +391,6 @@ header {
                     img {
                         width: 100%;
                         height: 174px;
-                        
                         object-position: 50% 60%;
                         border-radius: 15px 15px 0px 0px;
                     }
@@ -454,6 +450,7 @@ footer {
         font-size: 18px;
         margin-top: 0;
         margin-bottom: 0.938rem;
+        user-select: none;
         @media (min-width: 768px) {
             margin-bottom: 0;
         } 
