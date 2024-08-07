@@ -436,7 +436,7 @@ header .btn-back {
 }
 .restaurants .background-restaurants .box-restaurants .lien-card-resto {
   display: flex;
-  width: 100%;
+  margin-right: -20px;
 }
 .restaurants .background-restaurants .box-restaurants .lien-card-resto a {
   width: 100%;
@@ -498,7 +498,7 @@ header .btn-back {
   }
 }
 .restaurants .background-restaurants .box-restaurants .lien-card-resto a .card-restaurant .info-restaurant .info-text-restaurant {
-  width: 90%;
+  width: 80%;
 }
 .restaurants .background-restaurants .box-restaurants .lien-card-resto a .card-restaurant .info-restaurant .info-text-restaurant h4 {
   font-weight: 700;
