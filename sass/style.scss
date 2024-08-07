@@ -97,12 +97,6 @@ a {
     cursor: pointer;
 }
 
-img {
-    object-fit: cover;
-}
-
-
-
 .section-title {
     font-weight: 700;
     font-size: 24px;
@@ -356,7 +350,6 @@ header {
             }
             a {
                 width: 100%;
-               
                 .card-restaurant {
                     position: relative;
                     background-color: white;
@@ -372,8 +365,20 @@ header {
                     img {
                         width: 100%;
                         height: 174px;
-                        object-position: 50% 60%;
                         border-radius: 15px 15px 0px 0px;
+                        object-fit: cover;
+                    }
+                    .palette {
+                        object-position: 50% 80%;
+                    }
+                    .note {
+                        object-position: 50% 60%;
+                    }
+                    .francaise {
+                        object-position: 50% 95%;
+                    }
+                    .delice {
+                        object-position: 50% 95%;
                     }
                     .new {
                         position: absolute;
@@ -509,7 +514,7 @@ footer {
             padding-top: 30px;
             display: inline-flex;
             justify-content: space-between;
-            gap: 60px;
+            gap: 30px;
             @media (min-width: 768px) {
                 width: initial;
             }
@@ -532,12 +537,10 @@ footer {
             width: 634px;
             padding-left: 13px;
             padding-right: 13px;
-            
             .box-menu {
                 max-width: 100%;
                 width: 634px;
                 margin-top: 35px;
-                
                 .plat-title {
                     font-weight: 300;
                     font-size: 16px;
