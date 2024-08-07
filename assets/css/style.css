@@ -622,16 +622,24 @@ footer .box-footer .list-box-footer-2 {
   width: 1055px;
 }
 .menu .background-menu .box-resto-title {
+  width: 634px;
+  max-width: 100%;
   padding-top: 30px;
   display: inline-flex;
+  justify-content: space-between;
   gap: 60px;
+}
+@media (min-width: 768px) {
+  .menu .background-menu .box-resto-title {
+    width: initial;
+  }
 }
 .menu .background-menu .box-resto-title .resto-title {
   font-family: "Shrikhand", serif;
   font-weight: 400;
   font-style: normal;
   font-size: 28px;
-  margin: 0;
+  margin: 0px 16px;
 }
 .menu .background-menu .box-resto-title .btn-fav {
   position: relative;

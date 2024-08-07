@@ -504,13 +504,19 @@ footer {
         max-width: 100%;
         width: 1055px;
         .box-resto-title {
+            width: 634px;
+            max-width: 100%;
             padding-top: 30px;
             display: inline-flex;
+            justify-content: space-between;
             gap: 60px;
+            @media (min-width: 768px) {
+                width: initial;
+            }
             .resto-title {
                 @include title-h1-resto;
                 font-size: 28px;
-                margin: 0;
+                margin: 0px 16px;
             }
             .btn-fav {
                 position: relative;
