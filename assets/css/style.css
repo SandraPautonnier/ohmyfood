@@ -434,43 +434,47 @@ header .btn-back {
     row-gap: 50px;
   }
 }
-.restaurants .background-restaurants .box-restaurants a {
+.restaurants .background-restaurants .box-restaurants .lien-card-resto {
+  display: flex;
   width: 100%;
 }
-.restaurants .background-restaurants .box-restaurants a .card-restaurant {
+.restaurants .background-restaurants .box-restaurants .lien-card-resto a {
+  width: 100%;
+}
+.restaurants .background-restaurants .box-restaurants .lien-card-resto a .card-restaurant {
   position: relative;
   background-color: white;
   border-radius: 15px 15px 15px 15px;
   max-width: 100%;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
-.restaurants .background-restaurants .box-restaurants a .card-restaurant:hover {
+.restaurants .background-restaurants .box-restaurants .lien-card-resto a .card-restaurant:hover {
   box-shadow: 0px 3px 15px -5px rgba(0, 0, 0, 0.3);
 }
 @media (min-width: 1024px) {
-  .restaurants .background-restaurants .box-restaurants a .card-restaurant {
+  .restaurants .background-restaurants .box-restaurants .lien-card-resto a .card-restaurant {
     max-width: 490px;
   }
 }
-.restaurants .background-restaurants .box-restaurants a .card-restaurant img {
+.restaurants .background-restaurants .box-restaurants .lien-card-resto a .card-restaurant img {
   width: 100%;
   height: 174px;
   border-radius: 15px 15px 0px 0px;
   object-fit: cover;
 }
-.restaurants .background-restaurants .box-restaurants a .card-restaurant .palette {
+.restaurants .background-restaurants .box-restaurants .lien-card-resto a .card-restaurant .palette {
   object-position: 50% 80%;
 }
-.restaurants .background-restaurants .box-restaurants a .card-restaurant .note {
+.restaurants .background-restaurants .box-restaurants .lien-card-resto a .card-restaurant .note {
   object-position: 50% 60%;
 }
-.restaurants .background-restaurants .box-restaurants a .card-restaurant .francaise {
+.restaurants .background-restaurants .box-restaurants .lien-card-resto a .card-restaurant .francaise {
   object-position: 50% 95%;
 }
-.restaurants .background-restaurants .box-restaurants a .card-restaurant .delice {
+.restaurants .background-restaurants .box-restaurants .lien-card-resto a .card-restaurant .delice {
   object-position: 50% 95%;
 }
-.restaurants .background-restaurants .box-restaurants a .card-restaurant .new {
+.restaurants .background-restaurants .box-restaurants .lien-card-resto a .card-restaurant .new {
   position: absolute;
   top: 15px;
   right: 15px;
@@ -483,32 +487,38 @@ header .btn-back {
   color: #008766;
   border-radius: 2px;
 }
-.restaurants .background-restaurants .box-restaurants a .card-restaurant .info-restaurant {
+.restaurants .background-restaurants .box-restaurants .lien-card-resto a .card-restaurant .info-restaurant {
   display: flex;
   padding: 15px 0px 5px 15px;
   margin: 0px;
 }
 @media (min-width: 1024px) {
-  .restaurants .background-restaurants .box-restaurants a .card-restaurant .info-restaurant {
+  .restaurants .background-restaurants .box-restaurants .lien-card-resto a .card-restaurant .info-restaurant {
     padding-left: 20px;
   }
 }
-.restaurants .background-restaurants .box-restaurants a .card-restaurant .info-restaurant .info-text-restaurant {
+.restaurants .background-restaurants .box-restaurants .lien-card-resto a .card-restaurant .info-restaurant .info-text-restaurant {
   width: 90%;
 }
-.restaurants .background-restaurants .box-restaurants a .card-restaurant .info-restaurant .info-text-restaurant h4 {
+.restaurants .background-restaurants .box-restaurants .lien-card-resto a .card-restaurant .info-restaurant .info-text-restaurant h4 {
   font-weight: 700;
   font-size: 18px;
   line-height: 21.09px;
   margin-bottom: 5px;
   margin-top: 0px;
 }
-.restaurants .background-restaurants .box-restaurants a .card-restaurant .info-restaurant .info-text-restaurant p {
+.restaurants .background-restaurants .box-restaurants .lien-card-resto a .card-restaurant .info-restaurant .info-text-restaurant p {
   font-weight: 300;
   margin-top: 0;
   margin-bottom: 10px;
   font-size: 17px;
   line-height: 19.92px;
+}
+.restaurants .background-restaurants .box-restaurants .lien-card-resto .btn-fav {
+  position: relative;
+  z-index: 9;
+  left: -50px;
+  bottom: -198px;
 }
 
 footer {
