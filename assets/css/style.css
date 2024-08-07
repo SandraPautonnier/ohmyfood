@@ -589,6 +589,9 @@ footer .box-footer .list-box-footer-2 {
   }
 }
 
+.heros .title-hidden {
+  display: none;
+}
 .heros img {
   position: relative;
   z-index: -1;
@@ -670,6 +673,7 @@ footer .box-footer .list-box-footer-2 {
   margin-top: 13px;
   display: flex;
   box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
   overflow: hidden;
 }
 .menu .background-menu .box-plat .box-menu .card-menu .check {
@@ -697,7 +701,7 @@ footer .box-footer .list-box-footer-2 {
   flex-direction: column;
   overflow: hidden;
 }
-.menu .background-menu .box-plat .box-menu .card-menu .info-menu h4 {
+.menu .background-menu .box-plat .box-menu .card-menu .info-menu .h-menu {
   font-weight: 700;
   font-size: 18px;
   line-height: 21.09px;
@@ -709,7 +713,7 @@ footer .box-footer .list-box-footer-2 {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.menu .background-menu .box-plat .box-menu .card-menu .info-menu p {
+.menu .background-menu .box-plat .box-menu .card-menu .info-menu .p-menu {
   font-weight: 300;
   margin-top: 0;
   margin-bottom: 10px;

@@ -475,6 +475,9 @@ footer {
 
 //heros
 .heros{
+    .title-hidden {
+        display: none;
+    }
     img {
         position: relative;
         z-index: -1;
@@ -549,6 +552,7 @@ footer {
                     margin-top: 13px;
                     display: flex;
                     box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.10);
+                    cursor: pointer;
                     overflow: hidden;
                     .check {
                         background-color: $tertiary-color;
@@ -573,13 +577,13 @@ footer {
                         width: 87%;
                         @include flex-colunm;
                         overflow: hidden;
-                        h4 {
+                        .h-menu {
                             @include h4-card;
                             padding-top: 15px;
                             padding-left: 15px;
                             @include overflow-ellipsis;
                         }
-                        p {
+                        .p-menu {
                             @include p-card;
                             font-size: 15px;
                             line-height: 17.63px;
