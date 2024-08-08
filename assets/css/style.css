@@ -11,7 +11,7 @@ body .loader-container {
   justify-content: center;
   align-items: center;
   align-content: center;
-  transition: opacity 3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
   animation: loader-container 3s 1 forwards;
 }
 body .loader-container .let {
@@ -101,13 +101,6 @@ a {
   line-height: 28.13px;
   padding-left: 1.313rem;
   margin: 0;
-}
-
-button {
-  border: none;
-  background-color: transparent;
-  margin: 0;
-  padding: 0;
 }
 
 .btn-main {
@@ -342,7 +335,7 @@ header .btn-back {
   }
 }
 .fonctionnement .background-fontionnement .box-fonctionnement .card-fonctionnement {
-  width: 322.49px;
+  width: 100%;
   height: 72.38px;
   background-color: #f6f6f6;
   border-radius: 20px;
@@ -354,6 +347,11 @@ header .btn-back {
   align-items: center;
   box-shadow: 0px 3px 15px -5px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease-in-out;
+}
+@media (min-width: 768px) {
+  .fonctionnement .background-fontionnement .box-fonctionnement .card-fonctionnement {
+    width: 322.49px;
+  }
 }
 .fonctionnement .background-fontionnement .box-fonctionnement .card-fonctionnement:hover {
   transform: scale(1.05);
@@ -446,7 +444,7 @@ header .btn-back {
   background-color: white;
   border-radius: 15px 15px 15px 15px;
   max-width: 100%;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.4s ease-out;
 }
 .restaurants .background-restaurants .box-restaurants .lien-card-resto a .card-restaurant:hover {
   box-shadow: 0px 3px 15px -5px rgba(0, 0, 0, 0.3);
@@ -675,8 +673,8 @@ footer .box-footer .list-box-footer-2 {
   padding-right: 13px;
 }
 .menu .background-menu .box-plat .box-menu {
-  max-width: 100%;
   width: 634px;
+  max-width: 100%;
   margin-top: 35px;
 }
 .menu .background-menu .box-plat .box-menu .plat-title {
@@ -778,17 +776,17 @@ footer .box-footer .list-box-footer-2 {
 }
 
 .plat-title {
-  animation: anim-card-menu 2.7s alternate;
+  animation: anim-card-menu 2.6s alternate;
   animation-fill-mode: backwards;
 }
 
 .line-title {
-  animation: anim-card-menu 2.7s alternate;
+  animation: anim-card-menu 2.6s alternate;
   animation-fill-mode: backwards;
 }
 
 .card-menu {
-  animation: anim-card-menu 2.7s alternate;
+  animation: anim-card-menu 2.6s alternate;
   animation-fill-mode: backwards;
 }
 

@@ -10,6 +10,11 @@
     max-width: 1080px;
 }
 
+@mixin w100-634 {
+    width: 634px;
+    max-width: 100%;
+}
+
 @mixin flex-center {
     display: flex;
     flex-direction: column;
@@ -96,6 +101,10 @@
     font-style: normal;
 }
 
+@mixin title-size-16 {
+    font-size: 16px;
+    line-height: 18.75px;
+}
 
 @mixin padding-card {
     display: flex;
@@ -142,7 +151,7 @@
 }
 
 @mixin anim-card-menu {
-    animation: anim-card-menu 2.7s alternate; 
+    animation: anim-card-menu 2.6s alternate; 
     animation-fill-mode: backwards;
 }
 

@@ -18,7 +18,7 @@ body {
         justify-content: center;
         align-items: center;
         align-content: center;
-        transition: opacity 3s ease-in-out;
+        transition: opacity 0.3s ease-in-out;
         animation: loader-container 3s 1 forwards;
         .let {
             @include title-h1-resto;
@@ -105,20 +105,12 @@ a {
     margin: 0;
 }
 
-
-button {
-    border: none;
-    background-color: transparent;
-    @include no-pad-marg;
-}
-
 .btn-main {
     padding: 16px 23px;
     border: none;
     border-radius: 50px;
     font-weight: 500;
-    font-size: 16px;
-    line-height: 18.75px;
+    @include title-size-16;
     color: white;
     margin: 0;
     @include color-gradient;
@@ -272,7 +264,7 @@ header {
                 gap: 35px;
             } 
             .card-fonctionnement {
-                width: 322.49px;
+                width: 100%;
                 height: 72.38px;
                 background-color: $background-light-grey;
                 border-radius: 20px;
@@ -282,6 +274,9 @@ header {
                 @include flex-align;
                 @include box-shadow;
                 transition: all 0.3s ease-in-out;
+                @media (min-width: 768px) {
+                    width: 322.49px;
+                } 
                 &:hover {
                     transform: scale(1.05);
                     color: $main-color;
@@ -309,8 +304,7 @@ header {
                 }
                 h4 {
                     font-weight: 500;
-                    font-size: 16px;
-                    line-height: 18.75px;
+                    @include title-size-16;
                     @include relative-12;
                 }
             }
@@ -358,7 +352,7 @@ header {
                         background-color: white;
                         border-radius: 15px 15px 15px 15px;
                         max-width: 100%;
-                        transition: all 0.5s ease-in-out;
+                        transition: all 0.4s ease-out;
                         &:hover {
                             @include box-shadow;
                         }
@@ -519,8 +513,7 @@ footer {
         max-width: 100%;
         width: 1055px;
         .box-resto-title {
-            width: 634px;
-            max-width: 100%;
+            @include w100-634;
             padding-top: 30px;
             display: inline-flex;
             justify-content: space-between;
@@ -548,13 +541,11 @@ footer {
             padding-left: 13px;
             padding-right: 13px;
             .box-menu {
-                max-width: 100%;
-                width: 634px;
+                @include w100-634;
                 margin-top: 35px;
                 .plat-title {
                     font-weight: 300;
-                    font-size: 16px;
-                    line-height: 18.75px;
+                    @include title-size-16;
                     margin-bottom: -7px;
                     margin-top: 0px;
                 } 
@@ -636,7 +627,7 @@ footer {
 }
 }
 
-//Animations
+//Animations apparitions
 .plat-title {
     @include anim-card-menu;
 }
@@ -688,6 +679,7 @@ footer {
     }
 } 
 
+//footer main-page
 .main-page {
     footer {
         margin-top: -50px;
