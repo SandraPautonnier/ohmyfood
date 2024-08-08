@@ -1,5 +1,6 @@
 @import "./_variables.scss";
 
+//Tailles
 @mixin no-pad-marg {
     margin: 0;
     padding: 0;
@@ -15,6 +16,32 @@
     max-width: 100%;
 }
 
+@mixin padding-section {
+    padding-top: 3.125rem;
+    padding-bottom: 3.125rem;
+}
+
+@mixin padding-section-tablette {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+@mixin box-radius {
+    border-radius: 30px;
+}
+
+@mixin relative-12 {
+    position: relative;
+    left: -12px;
+}
+
+@mixin padding-card {
+    display: flex;
+    padding: 15px 0px 5px 15px;
+    
+}
+
+//Flex-box
 @mixin flex-center {
     display: flex;
     flex-direction: column;
@@ -49,6 +76,7 @@
     align-items: flex-end;
 }
 
+//Couleurs et fonds
 @mixin box-shadow {
     box-shadow: 0px 3px 15px -5px rgba(0,0,0,0.3);
 }
@@ -70,18 +98,9 @@
     -moz-text-fill-color: transparent;
 }
 
-@mixin box-radius {
-    border-radius: 30px;
-}
-
-@mixin padding-section {
-    padding-top: 3.125rem;
-    padding-bottom: 3.125rem;
-}
-
-@mixin padding-section-tablette {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+@mixin color-grey {
+    background-color: $background-location;
+    color: $background-dark-grey;
 }
 
 @mixin text-form {
@@ -95,21 +114,29 @@
     font-weight: 500; 
 }
 
+//Textes
 @mixin title-h1-resto {
     font-family: "Shrikhand", serif;
     font-weight: 400;
     font-style: normal;
 }
 
+@mixin p-size-14 {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.41px;
+}
+
 @mixin title-size-16 {
     font-size: 16px;
     line-height: 18.75px;
+    font-weight: 500;
+    
 }
 
-@mixin padding-card {
-    display: flex;
-    padding: 15px 0px 5px 15px;
-    
+@mixin title-size-24 {
+    font-size: 24px;
+    line-height: 28.13px;
 }
 
 @mixin h4-card {
@@ -126,11 +153,6 @@
     margin-bottom: 10px;
 }
 
-@mixin relative-12 {
-    position: relative;
-    left: -12px;
-}
-
 @mixin overflow-ellipsis {
     overflow: hidden;
     white-space: nowrap;
@@ -138,6 +160,7 @@
     
 }
 
+//Footer
 @mixin footer-mobile {
     font-size: 16px;
     display: flex;
@@ -150,6 +173,7 @@
     gap: 17px;
 }
 
+//Animations
 @mixin anim-card-menu {
     animation: anim-card-menu 2.6s alternate; 
     animation-fill-mode: backwards;

@@ -82,9 +82,9 @@ h1 {
   font-family: "Shrikhand", serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 30px;
   display: flex;
   justify-content: center;
+  font-size: 30px;
   margin-bottom: 0.313rem;
   margin-top: 0.938rem;
 }
@@ -96,10 +96,9 @@ a {
 }
 
 .section-title {
-  font-weight: 700;
   font-size: 24px;
   line-height: 28.13px;
-  padding-left: 1.313rem;
+  padding-left: 20px;
   margin: 0;
 }
 
@@ -107,9 +106,9 @@ a {
   padding: 16px 23px;
   border: none;
   border-radius: 50px;
-  font-weight: 500;
   font-size: 16px;
   line-height: 18.75px;
+  font-weight: 500;
   color: white;
   margin: 0;
   background: rgba(255, 255, 255, 0);
@@ -271,10 +270,9 @@ header .btn-back {
 .hero-acceuil h2 {
   padding: 20px 20px 0px;
   margin-bottom: 0px;
-  font-weight: 700;
+  text-align: center;
   font-size: 24px;
   line-height: 28.13px;
-  text-align: center;
 }
 @media (min-width: 768px) {
   .hero-acceuil h2 {
@@ -286,7 +284,7 @@ header .btn-back {
 .hero-acceuil p {
   padding: 0px 20px 0px;
   font-weight: 300;
-  font-size: 1.125rem;
+  font-size: 18px;
 }
 @media (min-width: 768px) {
   .hero-acceuil p {
@@ -335,7 +333,7 @@ header .btn-back {
   }
 }
 .fonctionnement .background-fontionnement .box-fonctionnement .card-fonctionnement {
-  width: 100%;
+  width: 322.49px;
   height: 72.38px;
   background-color: #f6f6f6;
   border-radius: 20px;
@@ -353,18 +351,13 @@ header .btn-back {
     width: 322.49px;
   }
 }
-.fonctionnement .background-fontionnement .box-fonctionnement .card-fonctionnement:hover {
-  transform: scale(1.05);
-  color: #9356dc;
-}
-.fonctionnement .background-fontionnement .box-fonctionnement .card-fonctionnement:hover i {
-  color: #9356dc;
-}
-.fonctionnement .background-fontionnement .box-fonctionnement .card-fonctionnement p {
+.fonctionnement .background-fontionnement .box-fonctionnement .card-fonctionnement span {
   width: 24px;
   height: 24px;
   border-radius: 50%;
   font-size: 14px;
+  font-weight: 500;
+  line-height: 16.41px;
   line-height: 1.65em;
   text-align: center;
   background-color: #9356dc;
@@ -381,9 +374,9 @@ header .btn-back {
   left: -12px;
 }
 .fonctionnement .background-fontionnement .box-fonctionnement .card-fonctionnement h4 {
-  font-weight: 500;
   font-size: 16px;
   line-height: 18.75px;
+  font-weight: 500;
   position: relative;
   left: -12px;
 }
@@ -442,7 +435,7 @@ header .btn-back {
 .restaurants .background-restaurants .box-restaurants .lien-card-resto a .card-restaurant {
   position: relative;
   background-color: white;
-  border-radius: 15px 15px 15px 15px;
+  border-radius: 15px;
   max-width: 100%;
   transition: all 0.4s ease-out;
 }
@@ -477,13 +470,13 @@ header .btn-back {
   top: 15px;
   right: 15px;
   padding: 0.45rem 0.8rem;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 16.41px;
   text-align: center;
   background-color: #99e2d0;
   color: #008766;
   border-radius: 2px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.41px;
 }
 .restaurants .background-restaurants .box-restaurants .lien-card-resto a .card-restaurant .info-restaurant {
   display: flex;
@@ -678,9 +671,9 @@ footer .box-footer .list-box-footer-2 {
   margin-top: 35px;
 }
 .menu .background-menu .box-plat .box-menu .plat-title {
-  font-weight: 300;
   font-size: 16px;
   line-height: 18.75px;
+  font-weight: 300;
   margin-bottom: -7px;
   margin-top: 0px;
 }
@@ -705,8 +698,8 @@ footer .box-footer .list-box-footer-2 {
   border-radius: 0px 15px 15px 0px;
   padding: 27px 20px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   color: white;
   font-size: 20px;
   margin-right: -70px;
