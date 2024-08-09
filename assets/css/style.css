@@ -325,7 +325,6 @@ header .btn-back {
   border-radius: 20px;
   gap: 25px;
   justify-content: flex-start;
-  cursor: pointer;
   display: flex;
   flex-direction: row;
   align-items: center;
