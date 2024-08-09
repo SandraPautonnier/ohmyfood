@@ -23,7 +23,7 @@ body {
         .let {
             @include title-h1-resto;
             font-size: 30px;
-            animation: loader infinite 0.3s alternate
+            animation: loader infinite 0.3s alternate;
         }
         .l1 {
             animation-delay: 0.05s;
