@@ -269,6 +269,7 @@ header {
                 border-radius: 20px;
                 gap: 25px;
                 justify-content: flex-start;
+                cursor: default;
                 @include flex-align;
                 @include box-shadow;
                 transition: all 0.3s ease-in-out;
