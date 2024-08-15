@@ -1,0 +1,181 @@
+@import "./_variables.scss";
+
+//Tailles
+@mixin no-pad-marg {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin w100-1080 {
+    width: 100%;
+    max-width: 1080px;
+}
+
+@mixin w100-634 {
+    width: 634px;
+    max-width: 100%;
+}
+
+@mixin padding-section {
+    padding-top: 3.125rem;
+    padding-bottom: 3.125rem;
+}
+
+@mixin padding-section-tablette {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+@mixin box-radius {
+    border-radius: 30px;
+}
+
+@mixin relative-12 {
+    position: relative;
+    left: -12px;
+}
+
+@mixin padding-card {
+    display: flex;
+    padding: 15px 0px 5px 15px;
+    
+}
+
+//Flex-box
+@mixin flex-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin just-flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin flex-colunm {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-align {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin footer-row {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+}
+
+//Couleurs et fonds
+@mixin box-shadow {
+    box-shadow: 0px 3px 15px -5px rgba(0,0,0,0.3);
+}
+
+@mixin color-gradient {
+    background: rgb(255,255,255,0);
+    background-image: -moz-linear-gradient(0deg, $main-color 0%, $secondary-color 100%);
+    background-image: -webkit-linear-gradient(0deg, $main-color 0%, $secondary-color 100%);
+    background-image: linear-gradient(0deg, $main-color 0%, $secondary-color 100%);
+    
+}
+
+@mixin text-transparent {
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+
+@mixin color-grey {
+    background-color: $background-location;
+    color: $background-dark-grey;
+}
+
+@mixin text-form {
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    color: $background-dark-grey;
+    -webkit-text-fill-color: $background-dark-grey;
+    fill: $background-dark-grey;
+    text-decoration: none;
+    -moz-text-fill-color: $background-dark-grey;
+    font-weight: 500; 
+}
+
+//Textes
+@mixin title-h1-resto {
+    font-family: "Shrikhand", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@mixin p-size-14 {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.41px;
+}
+
+@mixin title-size-16 {
+    font-size: 16px;
+    line-height: 18.75px;
+    font-weight: 500;
+    
+}
+
+@mixin title-size-24 {
+    font-size: 24px;
+    line-height: 28.13px;
+}
+
+@mixin h4-card {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21.09px;
+    margin-bottom: 5px;
+    margin-top: 0px;
+}
+
+@mixin p-card {
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+@mixin overflow-ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    
+}
+
+//Footer
+@mixin footer-mobile {
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+@mixin footer-tablette {
+    flex-direction: row;
+    gap: 17px;
+}
+
+//Animations
+@mixin anim-card-menu {
+    animation: anim-card-menu 1s alternate; 
+    animation-fill-mode: backwards;
+}
+

@@ -1,0 +1,15 @@
+{
+  "name": "ohmyfood-master",
+  "version": "1.0.0",
+  "description": "OhMyFood",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass sass/styles.scss assets/css/styles.css",
+    "sass:watch": "sass sass/styles.scss assets/css/styles.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ohmyfood-master": "file:"
+  }
+}
