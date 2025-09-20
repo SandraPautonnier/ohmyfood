@@ -10,7 +10,7 @@ Contexte fictif : Je suis développeuse pour Ohmyfood et ma mission est de déve
 ## Livrables réalisées :
 🟣 Contenu des pages
 - Page d’accueil (x1)
-● Affichage de la localisation des restaurants. À terme, il sera possible de choisir sa
+  - Affichage de la localisation des restaurants. À terme, il sera possible de choisir sa
 localisation pour trouver des restaurants proches d’un certain lieu.
 ● Une courte présentation de l’entreprise.
 ● Une section contenant les 4 menus sous forme de cartes. Au clic sur la carte,
